@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: mock_ui
+  password: redhat 
+  host: localhost 
+
+development:
+  <<: *default
+  database: mock_ui
+
+test:
+  <<: *default
+  database: mock_ui_test
+
+production:
+  <<: *default
+  database: mock_ui_production
+  username: mock_ui
+  password: <%= ENV['MOCK_UI_DATABASE_PASSWORD'] %>

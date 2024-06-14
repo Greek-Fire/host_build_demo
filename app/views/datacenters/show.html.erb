@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Compute Clusters in Datacenter: <%= @datacenter %></h1>
+      <p>vCenter: <%= @vcenter.name %></p>
+
+      <h2>Clusters</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Number of Hosts</th>
+            <th>Total Storage</th>
+            <th>Total VM Networks</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @compute_clusters.each do |cluster| %>
+            <tr>
+              <td><%= cluster[:name] %></td>
+              <td><%= cluster[:num_hosts] %></td>
+              <td><%= link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, cluster[:name]) %></td>
+              <td><%= link_to cluster[:total_vm_networks], networks_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, cluster[:name]) %></td>
+              <td><%= cluster[:availability] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

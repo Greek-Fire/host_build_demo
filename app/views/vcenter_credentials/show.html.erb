@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @vcenter.name %></h1>
+      <p><%= @vcenter.url %></p>
+      <h2>Credentials</h2>
+      <ul class="list-group">
+        <% @vcenter.vcenter_credentials.each do |credential| %>
+          <li class="list-group-item">
+            <div>
+              <strong>Username:</strong> <%= credential.username %><br>
+              <strong>SSL Verification:</strong> <%= credential.ssl_verification ? 'Enabled' : 'Disabled' %>
+            </div>
+            <div class="btn-group mt-2">
+              <%= link_to 'Edit', edit_vcenter_vcenter_credential_path(@vcenter, credential), class: 'btn btn-warning btn-sm' %>
+              <%= form_with url: vcenter_vcenter_credential_path(@vcenter, credential), method: :delete, local: true, html: { onsubmit: "return confirm('Are you sure you want to delete this credential?');" } do %>
+                <%= submit_tag 'Delete', class: 'btn btn-danger btn-sm' %>
+              <% end %>
+              <%= form_with url: verify_vcenter_vcenter_credential_path(@vcenter, credential), method: :post, local: true do %>
+                <%= submit_tag 'Verify', class: 'btn btn-primary btn-sm' %>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to 'Add Credential', new_vcenter_vcenter_credential_path(@vcenter), class: 'btn btn-primary mt-3' %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Compute Cluster: <%= @cluster[:name] %></h1>
+      <p><strong>Number of Hosts:</strong> <%= @cluster[:num_hosts] %></p>
+      <p><strong>Total Storage:</strong> <%= number_to_human_size(@cluster[:total_storage]) %></p>
+      <p><strong>Total VM Networks:</strong> <%= @cluster[:total_vm_networks] %></p>
+      <p><strong>Availability:</strong> <%= @cluster[:availability] %></p>
+    </div>
+  </div>
+</div>
+

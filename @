@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Datacenter: <%= params[:id] %></h1>
+
+      <h2>Compute Clusters</h2>
+      <% if @compute_clusters.present? %>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of Hosts</th>
+              <th>Total Storage</th>
+              <th>Total VM Networks</th>
+              <th>Availability</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @compute_clusters.each do |cluster| %>
+              <tr>
+                <td><%= cluster[:name] %></td>
+                <td><%= cluster[:num_hosts] %></td>
+                <td><%= link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]) %></td>
+                <td><%= cluster[:total_vm_networks] %></td>
+                <td><%= cluster[:availability] %></td>
+                <td>
+                  <div class="btn-group">
+                    <%= link_to 'View', vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]), class: 'btn btn-info btn-sm' %>
+                  </div>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No compute clusters available.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+

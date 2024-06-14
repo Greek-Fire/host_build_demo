@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mock UI</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 bg-light sidebar">
+          <nav class="nav flex-column vh-100 p-3">
+            <%= nav_link_to 'Home', root_path %>
+            <%= nav_link_to 'vCenter', vcenters_path %>
+          </nav>
+        </div>
+        <div class="col-md-10">
+          <% if flash[:notice] %>
+            <div class="alert alert-success">
+              <%= flash[:notice] %>
+            </div>
+          <% elsif flash[:alert] %>
+            <div class="alert alert-danger">
+              <%= flash[:alert] %>
+            </div>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

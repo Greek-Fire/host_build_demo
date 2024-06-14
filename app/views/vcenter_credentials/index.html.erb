@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>vCenter Credentials</h1>
+      <p>Manage your vCenter credentials here. You can create new credentials or delete existing ones.</p>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>vSphere Server</th>
+            <th>Username</th>
+            <th>SSL Verification</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @vcenter_credentials.each do |credential| %>
+            <tr>
+              <td><%= credential.vsphere_server %></td>
+              <td><%= credential.username %></td>
+              <td><%= credential.ssl_verification ? 'Enabled' : 'Disabled' %></td>
+              <td>
+                <%= link_to 'Edit', edit_vcenter_credential_path(credential), class: 'btn btn-warning btn-sm' %>
+                <%= link_to 'Delete', vcenter_credential_path(credential), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm ms-2' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Create New Credential', new_vcenter_credential_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+

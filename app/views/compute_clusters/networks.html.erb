@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Networks in Compute Cluster: <%= @compute_cluster %></h1>
+      <p>Datacenter: <%= @datacenter %></p>
+      <p>vCenter: <%= @vcenter.name %></p>
+
+      <h2>Networks</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Datacenter</th>
+            <th>Cluster</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @networks.each do |network| %>
+            <tr>
+              <td><%= network[:name] %></td>
+              <td><%= network[:type] %></td>
+              <td><%= network[:datacenter] %></td>
+              <td><%= network[:cluster] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

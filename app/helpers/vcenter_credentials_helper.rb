@@ -1,0 +1,2 @@
+module VcenterCredentialsHelper
+end
