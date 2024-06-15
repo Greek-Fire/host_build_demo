@@ -18744,3 +18744,534 @@ Processing by ComputeClustersController#networks as HTML
 Completed 200 OK in 460ms (Views: 12.9ms | ActiveRecord: 1.1ms | Allocations: 49542)
 
 
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-15 00:53:43 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.3.2 at 2024-06-15 00:53:54 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-15 00:54:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (could not connect to server: Connection refused
+	Is the server running on host "127.0.0.1" and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:80:in `rescue in new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:68:in `new_client'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:980:in `connect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:992:in `reconnect'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:685:in `block in reconnect!'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:684:in `reconnect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:788:in `verify!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:795:in `connect!'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1001:in `block in with_raw_connection'
+activesupport (7.1.3.4) lib/active_support/concurrency/null_lock.rb:9:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1000:in `with_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:1113:in `valid_raw_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `get_database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:374:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:70:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/schema_cache.rb:200:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract_adapter.rb:871:in `database_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:644:in `check_version'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:678:in `new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:723:in `checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:702:in `try_to_checkout_new_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:654:in `acquire_connection'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `checkout'
+activerecord (7.1.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:182:in `connection'
+activerecord (7.1.3.4) lib/active_record/migration/pending_migration_connection.rb:8:in `establish_temporary_connection'
+activerecord (7.1.3.4) lib/active_record/migration.rb:774:in `block in pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `each'
+activerecord (7.1.3.4) lib/active_record/migration.rb:773:in `pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:752:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-15 01:04:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20240606161407_create_vcenter_credentials.rb
+db/migrate/20240606161408_add_vcenter_id_to_vcenter_credentials.rb
+db/migrate/20240607134350_create_vcenters.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "mock_ui" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE DATABASE "mock_ui" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE DATABASE "mock_ui" ENCODING = 'unicode'[0m
+  [1m[35m (121.5ms)[0m  [1m[35mCREATE DATABASE "mock_ui_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-06-15 01:10:20.981070', '2024-06-15 01:10:20.981075') RETURNING "key"[0m
+Migrating to CreateVcenterCredentials (20240606161407)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "vcenter_credentials" ("id" bigserial primary key, "vsphere_server" character varying, "username" character varying, "password" character varying, "ssl_verification" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240606161407') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddVcenterIdToVcenterCredentials (20240606161408)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "vcenter_credentials" ADD "vcenter_id" integer[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE INDEX "index_vcenter_credentials_on_vcenter_id" ON "vcenter_credentials" ("vcenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240606161408') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVcenters (20240607134350)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "vcenters" ("id" bigserial primary key, "name" character varying, "url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240607134350') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-15 01:13:50 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 463)
+Started GET "/" for 192.168.3.2 at 2024-06-15 01:13:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 9792.9ms | Allocations: 160668)
+Completed 200 OK in 9826ms (Views: 9802.9ms | ActiveRecord: 0.0ms | Allocations: 165446)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 1759.8ms | Allocations: 67709)
+Completed 200 OK in 1761ms (Views: 1760.3ms | ActiveRecord: 0.0ms | Allocations: 67984)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-15 01:14:08 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/_form.html.erb (Duration: 33.7ms | Allocations: 4445)
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 35.7ms | Allocations: 4755)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 11422)
+Completed 200 OK in 218ms (Views: 67.7ms | ActiveRecord: 25.9ms | Allocations: 31258)
+
+
+Started POST "/vcenters" for 192.168.3.2 at 2024-06-15 01:14:19 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter"=>{"name"=>"my lab", "url"=>"vcenter.lou.land"}, "commit"=>"Save vCenter"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenters_controller.rb:20:in `create'
+  [1m[36mVcenter Exists? (6.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" WHERE "vcenters"."name" = $1 LIMIT $2[0m  [["name", "my lab"], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:20:in `create'
+  [1m[36mVcenter Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" WHERE "vcenters"."url" = $1 LIMIT $2[0m  [["url", "vcenter.lou.land"], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:20:in `create'
+  [1m[36mVcenter Create (1.4ms)[0m  [1m[32mINSERT INTO "vcenters" ("name", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "my lab"], ["url", "vcenter.lou.land"], ["created_at", "2024-06-15 01:14:19.422045"], ["updated_at", "2024-06-15 01:14:19.422045"]]
+  ↳ app/controllers/vcenters_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenters_controller.rb:20:in `create'
+Redirected to http://192.168.2.229:3000/vcenters
+Completed 302 Found in 64ms (ActiveRecord: 12.0ms | Allocations: 9806)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-15 01:14:19 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1703)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 8325)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.9ms | Allocations: 8736)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:14:21 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.3ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+No credentials found for vCenter 1
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.5ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2532)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 9179)
+Completed 200 OK in 134ms (Views: 60.6ms | ActiveRecord: 9.0ms | Allocations: 18517)
+
+
+Started GET "/vcenters/1/vcenter_credentials/new" for 192.168.3.2 at 2024-06-15 01:14:23 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#new as HTML
+  Parameters: {"vcenter_id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter_credentials/new.html.erb within layouts/application
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vcenter_credentials/_form.html.erb:1
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenter_credentials/_form.html.erb:14
+  Rendered vcenter_credentials/_form.html.erb (Duration: 38.2ms | Allocations: 6895)
+  Rendered vcenter_credentials/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 7166)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 13824)
+Completed 200 OK in 129ms (Views: 72.9ms | ActiveRecord: 1.8ms | Allocations: 22807)
+
+
+Started POST "/vcenters/1/vcenter_credentials" for 192.168.3.2 at 2024-06-15 01:14:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter_credential"=>{"vcenter_id"=>"1", "username"=>"administator@lou.land", "password"=>"[FILTERED]", "ssl_verification"=>"0"}, "commit"=>"Save Credentials", "vcenter_id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:11:in `create'
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:11:in `create'
+  [1m[36mVcenterCredential Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenter_credentials" WHERE "vcenter_credentials"."username" = $1 AND "vcenter_credentials"."vcenter_id" = $2 LIMIT $3[0m  [["username", "administator@lou.land"], ["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:11:in `create'
+  [1m[36mVcenterCredential Create (1.6ms)[0m  [1m[32mINSERT INTO "vcenter_credentials" ("vsphere_server", "username", "password", "ssl_verification", "created_at", "updated_at", "vcenter_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["vsphere_server", nil], ["username", "administator@lou.land"], ["password", "[FILTERED]"], ["ssl_verification", false], ["created_at", "2024-06-15 01:14:31.571153"], ["updated_at", "2024-06-15 01:14:31.571153"], ["vcenter_id", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:11:in `create'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 32ms (ActiveRecord: 5.8ms | Allocations: 6075)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:14:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (getaddrinfo: Name or service not known)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (1.1ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1666)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 8320)
+Completed 200 OK in 895ms (Views: 38.0ms | ActiveRecord: 2.4ms | Allocations: 151696)
+
+
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:14:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Socket error during vCenter credential verification: Failed to open TCP connection to vcenter.lou.land:443 (getaddrinfo: Name or service not known)
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 157ms (ActiveRecord: 1.8ms | Allocations: 4133)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:14:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (getaddrinfo: Name or service not known)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 7911)
+Completed 200 OK in 176ms (Views: 37.8ms | ActiveRecord: 1.9ms | Allocations: 10273)
+
+
