@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     end
     post 'update_datacenters', on: :member
   end
+
+  resources :subnets
 end
