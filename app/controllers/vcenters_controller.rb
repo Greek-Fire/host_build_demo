@@ -7,7 +7,11 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters
+    @datacenters = @vcenter.datacenters.includes(:compute_clusters).map do |datacenter|
+      datacenter.as_json.merge(compute_clusters: datacenter.compute_clusters.map do |cluster|
+        cluster.as_json.merge(total_storage: calculate_total_storage(cluster))
+      end)
+    end
   end
 
   def new
@@ -76,5 +80,9 @@ class VcentersController < ApplicationController
     end
   rescue => e
     Rails.logger.error("Failed to fetch datacenters: #{e.message}")
+  end
+
+  def calculate_total_storage(cluster)
+    cluster.datastores.sum(&:total_storage)
   end
 end

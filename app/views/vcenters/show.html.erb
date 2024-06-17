@@ -43,18 +43,18 @@
         <ul class="list-group">
           <% @datacenters.each do |datacenter| %>
             <li class="list-group-item">
-              <%= link_to datacenter.name, vcenter_datacenter_path(@vcenter, datacenter) %>
+              <%= link_to datacenter['name'], vcenter_datacenter_path(@vcenter, datacenter['id']) %>
               <ul>
-                <% datacenter.compute_clusters.each do |cluster| %>
+                <% datacenter['compute_clusters'].each do |cluster| %>
                   <li>
-                    <strong>Cluster: </strong> <%= link_to cluster.name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster.name) %>
+                    <strong>Cluster: </strong> <%= link_to cluster['name'], vcenter_datacenter_compute_cluster_path(@vcenter, datacenter['id'], cluster['name']) %>
                     <ul>
-                      <li>Total Storage: <%= number_to_human_size(cluster.total_storage) %></li>
+                      <li>Total Storage: <%= number_to_human_size(cluster['total_storage']) %></li>
                       <li>
                         VM Networks:
                         <ul>
-                          <% cluster.vm_networks.each do |network| %>
-                            <li><%= network.name %></li>
+                          <% cluster['vm_networks'].each do |network| %>
+                            <li><%= network['name'] %></li>
                           <% end %>
                         </ul>
                       </li>
