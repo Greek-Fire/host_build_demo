@@ -6,6 +6,11 @@ class SubnetsController < ApplicationController
     @subnets = Subnet.all
   end
 
+  # GET /subnets/1
+  def show
+    # Assuming you want to show the subnet details
+  end
+
   # GET /subnets/new
   def new
     @subnet = Subnet.new
@@ -38,6 +43,12 @@ class SubnetsController < ApplicationController
     end
   end
 
+  # DELETE /subnets/1
+  def destroy
+    @subnet.destroy
+    redirect_to subnets_path, notice: 'Subnet was successfully destroyed.'
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -51,7 +62,6 @@ class SubnetsController < ApplicationController
   end
 
   def fetch_vm_networks
-    # Adjust this method to fetch VM networks as needed
     Vcenter.all.map { |vc| vc.networks }.flatten
   end
 end
