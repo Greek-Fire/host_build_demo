@@ -15,13 +15,13 @@ class DatacentersController < ApplicationController
 
   def fetch_compute_clusters(datacenter_id)
     require 'fog/vsphere'
-
+  
     credential = @vcenter.vcenter_credentials.first
     if credential.nil?
       Rails.logger.debug("No credentials found for vCenter #{@vcenter.id}")
       return []
     end
-
+  
     connection = Fog::Compute.new(
       provider: 'Vsphere',
       vsphere_username: credential.username,
@@ -31,11 +31,27 @@ class DatacentersController < ApplicationController
       vsphere_expected_pubkey_hash: 'a7401d408f9a4ac60848fe34242a9a9c89fcfb73231b2053f64540e8fb03721e',
       vsphere_insecure: !credential.ssl_verification
     )
-
+  
     datacenter = connection.datacenters.get(datacenter_id)
-    datacenter.clusters
+    datacenter.clusters.map do |cluster|
+      {
+        name: cluster.name,
+        num_hosts: cluster.num_host,
+        total_storage: calculate_total_storage(cluster),
+        total_vm_networks: fetch_vm_networks(cluster).size,
+        availability: cluster.overall_status
+      }
+    end
   rescue => e
     Rails.logger.error("Failed to fetch compute clusters: #{e.message}")
     []
   end
+  
+  def calculate_total_storage(cluster)
+    cluster.datastores.sum { |ds| ds.capacity }
+  end
+  
+  def fetch_vm_networks(cluster)
+    cluster.networks
+  end  
 end
