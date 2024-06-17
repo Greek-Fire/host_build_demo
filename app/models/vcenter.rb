@@ -1,11 +1,13 @@
 class Vcenter < ApplicationRecord
   has_many :vcenter_credentials, dependent: :destroy
+  has_many :networks, dependent: :destroy
 
   validates :name, presence: true, uniqueness: { message: "has already been taken" }
   validates :url, presence: true, uniqueness: { message: "has already been taken" }, format: { with: /\A[^http|https].*\z/, message: "must not start with http:// or https://" }
-  def networks
+
+  def update_networks
     credential = vcenter_credentials.first
-    return [] unless credential
+    return if credential.nil?
 
     connection = Fog::Compute.new(
       provider: 'Vsphere',
@@ -17,10 +19,12 @@ class Vcenter < ApplicationRecord
       vsphere_insecure: !credential.ssl_verification
     )
 
-    connection.networks.all.map(&:name)
+    new_networks = connection.networks.all.map(&:name)
+    transaction do
+      networks.destroy_all
+      new_networks.each { |network| networks.create(name: network) }
+    end
   rescue => e
     Rails.logger.error("Failed to fetch networks: #{e.message}")
-    []
   end
 end
-

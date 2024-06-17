@@ -37,11 +37,12 @@ class VcenterCredentialsController < ApplicationController
   def verify
     @vcenter_credential = VcenterCredential.find(params[:id])
     @vcenter = @vcenter_credential.vcenter # Make sure @vcenter is set
-    
+
     verification_success = verify_vcenter_credentials(@vcenter_credential)
 
     if verification_success
       flash[:notice] = "Credentials are valid."
+      @vcenter.update_networks
     else
       flash[:alert] = "Credentials are invalid."
     end
@@ -62,29 +63,30 @@ class VcenterCredentialsController < ApplicationController
     params.require(:vcenter_credential).permit(:vcenter_id, :username, :password, :ssl_verification)
   end
 
+
   def verify_vcenter_credentials(credential)
-    require 'fog/vsphere' 
-  
+    require 'fog/vsphere'
+
     host = credential.vcenter.url
     user = credential.username
     pass = credential.password
     inse = credential.ssl_verification
-  
+
     begin
-      Rails.logger.debug "Attempting to connect to vCenter at #{host}" 
+      Rails.logger.debug "Attempting to connect to vCenter at #{host}"
       Rails.logger.debug "username #{user}"
       Rails.logger.debug "SSL Verification: #{inse}"
       Rails.logger.debug "Insecure: #{!inse}"
-      Rails.logger.debug "Password present: #{pass}" 
-      
+      Rails.logger.debug "Password present: #{pass}"
+
       connection = Fog::Compute.new(
-      provider: 'Vsphere',
-      vsphere_username: user,
-      vsphere_password: pass,
-      vsphere_server: host,
-      vsphere_ssl: inse,
-      vsphere_expected_pubkey_hash: 'a7401d408f9a4ac60848fe34242a9a9c89fcfb73231b2053f64540e8fb03721e', 
-      vsphere_insecure: !inse
+        provider: 'Vsphere',
+        vsphere_username: user,
+        vsphere_password: pass,
+        vsphere_server: host,
+        vsphere_ssl: inse,
+        vsphere_expected_pubkey_hash: 'a7401d408f9a4ac60848fe34242a9a9c89fcfb73231b2053f64540e8fb03721e',
+        vsphere_insecure: !inse
       )
       connection.servers.all
       Rails.logger.debug "Successfully connected to vCenter at #{host}"

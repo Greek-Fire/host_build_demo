@@ -57,6 +57,6 @@ class SubnetsController < ApplicationController
   end
 
   def fetch_vm_networks
-    Vcenter.all.map { |vc| vc.networks }.flatten
+    Network.all.pluck(:name, :id)
   end
 end
