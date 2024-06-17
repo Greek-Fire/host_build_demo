@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mock UI</title>
+    <title>Satellite Host Builder</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
@@ -14,6 +14,15 @@
           <nav class="nav flex-column vh-100 p-3">
             <%= nav_link_to 'Home', root_path %>
             <%= nav_link_to 'vCenter', vcenters_path %>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Subnets
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%= link_to 'View Subnets', subnets_path, class: 'dropdown-item' %>
+                <%= link_to 'Create Subnet', new_subnet_path, class: 'dropdown-item' %>
+              </div>
+            </div>
           </nav>
         </div>
         <div class="col-md-10">
@@ -32,4 +41,3 @@
     </div>
   </body>
 </html>
-
