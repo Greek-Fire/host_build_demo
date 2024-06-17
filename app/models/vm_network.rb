@@ -1,6 +1,4 @@
 class VmNetwork < ApplicationRecord
-    has_many :subnets
-  
-    validates :name, presence: true
-  end
-  
+  belongs_to :compute_cluster
+  has_many :subnets, dependent: :destroy
+end
