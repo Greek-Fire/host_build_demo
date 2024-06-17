@@ -1,14 +1,9 @@
 class SubnetsController < ApplicationController
-  before_action :set_subnet, only: [:show, :edit, :update, :destroy]
+  before_action :set_subnet, only: [:edit, :update, :destroy]
 
   # GET /subnets
   def index
     @subnets = Subnet.all
-  end
-
-  # GET /subnets/1
-  def show
-    # Assuming you want to show the subnet details
   end
 
   # GET /subnets/new
@@ -58,7 +53,7 @@ class SubnetsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def subnet_params
-    params.require(:subnet).permit(:name, :address, :cidr, :mask, :gateway, :dns1, :dns2, :vm_network_id)
+    params.require(:subnet).permit(:name, :address, :cidr, :mask, :gateway, :dns1, :dns2, :vm_network)
   end
 
   def fetch_vm_networks
