@@ -1,2 +1,6 @@
 class VmNetwork < ApplicationRecord
-end
+    has_many :subnets
+  
+    validates :name, presence: true
+  end
+  

@@ -1,55 +1,54 @@
 <%= form_with model: @subnet, local: true do |form| %>
-    <% if @subnet.errors.any? %>
-      <div class="alert alert-danger">
-        <h4><%= pluralize(@subnet.errors.count, "error") %> prohibited this subnet from being saved:</h4>
-        <ul>
-          <% @subnet.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  
-    <div class="form-group mb-3">
-      <%= form.label :name, 'Name', class: 'form-label' %>
-      <%= form.text_field :name, class: 'form-control' %>
+  <% if @subnet.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(@subnet.errors.count, "error") %> prohibited this subnet from being saved:</h4>
+      <ul>
+        <% @subnet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :address, 'Address', class: 'form-label' %>
-      <%= form.text_field :address, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :cidr, 'CIDR', class: 'form-label' %>
-      <%= form.text_field :cidr, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :mask, 'Mask', class: 'form-label' %>
-      <%= form.text_field :mask, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :gateway, 'Gateway', class: 'form-label' %>
-      <%= form.text_field :gateway, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :dns1, 'DNS1', class: 'form-label' %>
-      <%= form.text_field :dns1, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :dns2, 'DNS2', class: 'form-label' %>
-      <%= form.text_field :dns2, class: 'form-control' %>
-    </div>
-  
-    <div class="form-group mb-3">
-      <%= form.label :vm_network_id, 'VM Network', class: 'form-label' %>
-      <%= form.collection_select :vm_network_id, @vm_networks, :id, :name, {}, class: 'form-control' %>
-    </div>
-  
-    <%= form.submit 'Save', class: 'btn btn-primary' %>
   <% end %>
-  
+
+  <div class="form-group mb-3">
+    <%= form.label :name, 'Name', class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :address, 'Address', class: 'form-label' %>
+    <%= form.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :cidr, 'CIDR', class: 'form-label' %>
+    <%= form.text_field :cidr, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :mask, 'Mask', class: 'form-label' %>
+    <%= form.text_field :mask, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :gateway, 'Gateway', class: 'form-label' %>
+    <%= form.text_field :gateway, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :dns1, 'DNS1', class: 'form-label' %>
+    <%= form.text_field :dns1, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :dns2, 'DNS2', class: 'form-label' %>
+    <%= form.text_field :dns2, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.label :vm_network_id, 'VM Network', class: 'form-label' %>
+    <%= form.collection_select :vm_network_id, @vm_networks, :id, :name, {}, class: 'form-control' %>
+  </div>
+
+  <%= form.submit 'Save', class: 'btn btn-primary' %>
+<% end %>

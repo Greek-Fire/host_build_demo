@@ -7,7 +7,7 @@ class SubnetsController < ApplicationController
 
   def new
     @subnet = Subnet.new
-    @vm_networks = VmNetwork.all # Assuming you have a VmNetwork model
+    @vm_networks = VmNetwork.all
   end
 
   def create
@@ -15,6 +15,7 @@ class SubnetsController < ApplicationController
     if @subnet.save
       redirect_to subnets_path, notice: 'Subnet was successfully created.'
     else
+      @vm_networks = VmNetwork.all
       render :new
     end
   end
@@ -27,6 +28,7 @@ class SubnetsController < ApplicationController
     if @subnet.update(subnet_params)
       redirect_to subnets_path, notice: 'Subnet was successfully updated.'
     else
+      @vm_networks = VmNetwork.all
       render :edit
     end
   end
