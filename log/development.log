@@ -19275,3 +19275,724 @@ Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:4
 Completed 200 OK in 176ms (Views: 37.8ms | ActiveRecord: 1.9ms | Allocations: 10273)
 
 
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:24:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Socket error during vCenter credential verification: Failed to open TCP connection to vcenter.lou.land:443 (getaddrinfo: Name or service not known)
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 837ms (ActiveRecord: 32.1ms | Allocations: 158286)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:24:36 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (getaddrinfo: Name or service not known)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 3327)
+  Rendered layout layouts/application.html.erb (Duration: 211.7ms | Allocations: 35210)
+Completed 200 OK in 366ms (Views: 222.2ms | ActiveRecord: 2.0ms | Allocations: 40849)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:26:51 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Unexpected error during vCenter credential verification: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 772ms (ActiveRecord: 34.1ms | Allocations: 158288)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:26:52 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 15.5ms | Allocations: 3315)
+  Rendered layout layouts/application.html.erb (Duration: 197.6ms | Allocations: 34844)
+Completed 200 OK in 235ms (Views: 208.0ms | ActiveRecord: 2.0ms | Allocations: 40486)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:28:03 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Unexpected error during vCenter credential verification: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 706ms (ActiveRecord: 32.1ms | Allocations: 158308)
+
+
+Started GET "/vcenters/1/vcenter_credentials/1/edit" for 192.168.3.2 at 2024-06-15 01:28:04 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#edit as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.5ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:19:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter_credentials/edit.html.erb within layouts/application
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vcenter_credentials/_form.html.erb:1
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenter_credentials/_form.html.erb:14
+  Rendered vcenter_credentials/_form.html.erb (Duration: 26.7ms | Allocations: 5061)
+  Rendered vcenter_credentials/edit.html.erb within layouts/application (Duration: 29.3ms | Allocations: 5461)
+  Rendered layout layouts/application.html.erb (Duration: 182.4ms | Allocations: 37188)
+Completed 200 OK in 205ms (Views: 191.4ms | ActiveRecord: 2.2ms | Allocations: 40697)
+
+
+Started PATCH "/vcenters/1/vcenter_credentials/1" for 192.168.3.2 at 2024-06-15 01:28:16 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter_credential"=>{"vcenter_id"=>"1", "username"=>"administator@lou.land", "password"=>"[FILTERED]", "ssl_verification"=>"0"}, "commit"=>"Save Credentials", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mVcenterCredential Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenter_credentials" WHERE "vcenter_credentials"."username" = $1 AND "vcenter_credentials"."id" != $2 AND "vcenter_credentials"."vcenter_id" = $3 LIMIT $4[0m  [["username", "administator@lou.land"], ["id", 1], ["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:25:in `update'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 50ms (ActiveRecord: 14.9ms | Allocations: 6054)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:28:17 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2940)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 9566)
+Completed 200 OK in 74ms (Views: 44.8ms | ActiveRecord: 1.8ms | Allocations: 13859)
+
+
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:28:20 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Unexpected error during vCenter credential verification: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 21ms (ActiveRecord: 1.8ms | Allocations: 3535)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:28:21 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: Failed to open TCP connection to vcenter.lou.land:443 (Connection refused - connect(2) for "vcenter.lou.land" port 443)
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1386)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 7891)
+Completed 200 OK in 52ms (Views: 39.4ms | ActiveRecord: 1.7ms | Allocations: 10236)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:31:50 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Unexpected error during vCenter credential verification: InvalidLogin: Cannot complete login due to an incorrect user name or password.
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 4186ms (ActiveRecord: 37.6ms | Allocations: 174241)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:31:55 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Failed to fetch datacenters: InvalidLogin: Cannot complete login due to an incorrect user name or password.
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 3332)
+  Rendered layout layouts/application.html.erb (Duration: 185.5ms | Allocations: 34512)
+Completed 200 OK in 4427ms (Views: 196.5ms | ActiveRecord: 2.1ms | Allocations: 45293)
+
+
+Started GET "/vcenters/1/vcenter_credentials/1/edit" for 192.168.3.2 at 2024-06-15 01:32:11 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#edit as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (1.1ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:19:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter_credentials/edit.html.erb within layouts/application
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/vcenter_credentials/_form.html.erb:1
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenter_credentials/_form.html.erb:14
+  Rendered vcenter_credentials/_form.html.erb (Duration: 53.3ms | Allocations: 6972)
+  Rendered vcenter_credentials/edit.html.erb within layouts/application (Duration: 55.5ms | Allocations: 7253)
+  Rendered layout layouts/application.html.erb (Duration: 86.2ms | Allocations: 13900)
+Completed 200 OK in 101ms (Views: 87.1ms | ActiveRecord: 2.9ms | Allocations: 16031)
+
+
+Started PATCH "/vcenters/1/vcenter_credentials/1" for 192.168.3.2 at 2024-06-15 01:32:28 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter_credential"=>{"vcenter_id"=>"1", "username"=>"administrator@lou.land", "password"=>"[FILTERED]", "ssl_verification"=>"0"}, "commit"=>"Save Credentials", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (1.0ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mVcenterCredential Exists? (5.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenter_credentials" WHERE "vcenter_credentials"."username" = $1 AND "vcenter_credentials"."id" != $2 AND "vcenter_credentials"."vcenter_id" = $3 LIMIT $4[0m  [["username", "administrator@lou.land"], ["id", 1], ["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mVcenterCredential Update (1.0ms)[0m  [1m[33mUPDATE "vcenter_credentials" SET "username" = $1, "updated_at" = $2 WHERE "vcenter_credentials"."id" = $3[0m  [["username", "administrator@lou.land"], ["updated_at", "2024-06-15 01:32:28.209748"], ["id", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenter_credentials_controller.rb:24:in `update'
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:25:in `update'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 47ms (ActiveRecord: 12.4ms | Allocations: 7511)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:32:28 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1685)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 8311)
+Completed 200 OK in 299ms (Views: 41.5ms | ActiveRecord: 2.0ms | Allocations: 26721)
+
+
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-15 01:32:30 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administrator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Successfully connected to vCenter at vcenter.lou.land
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 880ms (ActiveRecord: 1.7ms | Allocations: 198902)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:32:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1545)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 8359)
+Completed 200 OK in 243ms (Views: 37.4ms | ActiveRecord: 1.9ms | Allocations: 25253)
+
+
+Started POST "/vcenters/1/update_datacenters" for 192.168.3.2 at 2024-06-15 01:32:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#update_datacenters as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 211ms (ActiveRecord: 1.3ms | Allocations: 16768)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-15 01:32:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1430)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 7932)
+Completed 200 OK in 248ms (Views: 38.6ms | ActiveRecord: 2.0ms | Allocations: 24504)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-15 01:32:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 18.4ms | Allocations: 2431)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 9416)
+Completed 200 OK in 458ms (Views: 66.0ms | ActiveRecord: 1.2ms | Allocations: 61791)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/networks" for 192.168.3.2 at 2024-06-15 01:32:43 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#networks as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:66:in `fetch_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/networks.html.erb within layouts/application
+  Rendered compute_clusters/networks.html.erb within layouts/application (Duration: 1.6ms | Allocations: 293)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 7211)
+Completed 200 OK in 458ms (Views: 35.5ms | ActiveRecord: 1.0ms | Allocations: 50550)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/datastores" for 192.168.3.2 at 2024-06-15 01:32:47 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#datastores as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.5ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:31:in `fetch_datastores'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/datastores.html.erb within layouts/application
+  Rendered compute_clusters/datastores.html.erb within layouts/application (Duration: 2.5ms | Allocations: 524)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 7292)
+Completed 200 OK in 365ms (Views: 33.0ms | ActiveRecord: 1.0ms | Allocations: 45795)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-15 01:38:05 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 6946)
+Completed 200 OK in 533ms (Views: 36.8ms | ActiveRecord: 14.8ms | Allocations: 59139)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-16 15:31:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 207.8ms | Allocations: 33805)
+Completed 200 OK in 243ms (Views: 228.1ms | ActiveRecord: 0.0ms | Allocations: 38119)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-16 15:32:18 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.4ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 127.9ms | Allocations: 13116)
+  Rendered layout layouts/application.html.erb (Duration: 183.9ms | Allocations: 19776)
+Completed 200 OK in 245ms (Views: 174.3ms | ActiveRecord: 27.9ms | Allocations: 27573)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-16 15:32:20 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 41.3ms | Allocations: 3124)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 9953)
+Completed 200 OK in 1204ms (Views: 109.3ms | ActiveRecord: 9.1ms | Allocations: 169489)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-16 15:32:24 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 8714)
+Completed 200 OK in 589ms (Views: 99.9ms | ActiveRecord: 1.5ms | Allocations: 62377)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 13:59:13 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (38.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 67.3ms | Allocations: 3967)
+  Rendered layout layouts/application.html.erb (Duration: 124.4ms | Allocations: 10685)
+Completed 200 OK in 149ms (Views: 95.6ms | ActiveRecord: 52.1ms | Allocations: 10992)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-17 13:59:50 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 6657)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 0.0ms | Allocations: 6904)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 14:00:29 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 1038)
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 7543)
+Completed 200 OK in 97ms (Views: 94.6ms | ActiveRecord: 1.5ms | Allocations: 7802)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 14:00:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.3ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 39.7ms | Allocations: 1402)
+  Rendered layout layouts/application.html.erb (Duration: 89.6ms | Allocations: 7901)
+Completed 200 OK in 314ms (Views: 111.4ms | ActiveRecord: 3.1ms | Allocations: 24816)
+
+
+Started POST "/vcenters/1/vcenter_credentials/1/verify" for 192.168.3.2 at 2024-06-17 14:00:39 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterCredentialsController#verify as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Verify", "vcenter_id"=>"1", "id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:54:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:58:in `set_vcenter_credential'
+  [1m[36mCACHE VcenterCredential Load (0.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:38:in `verify'
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenter_credentials_controller.rb:39:in `verify'
+Attempting to connect to vCenter at vcenter.lou.land
+username administrator@lou.land
+SSL Verification: false
+Insecure: true
+Password present: Gr33k*G0d7
+Successfully connected to vCenter at vcenter.lou.land
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 1088ms (ActiveRecord: 2.2ms | Allocations: 190765)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 14:00:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 39.8ms | Allocations: 1516)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 8331)
+Completed 200 OK in 382ms (Views: 114.5ms | ActiveRecord: 2.2ms | Allocations: 25226)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 14:00:42 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (1.0ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 6991)
+Completed 200 OK in 401ms (Views: 77.1ms | ActiveRecord: 1.8ms | Allocations: 56233)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/datastores" for 192.168.3.2 at 2024-06-17 14:00:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#datastores as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:31:in `fetch_datastores'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/datastores.html.erb within layouts/application
+  Rendered compute_clusters/datastores.html.erb within layouts/application (Duration: 3.2ms | Allocations: 556)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 7698)
+Completed 200 OK in 521ms (Views: 93.5ms | ActiveRecord: 1.4ms | Allocations: 46903)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/datastores" for 192.168.3.2 at 2024-06-17 14:00:50 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#datastores as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:31:in `fetch_datastores'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/datastores.html.erb within layouts/application
+  Rendered compute_clusters/datastores.html.erb within layouts/application (Duration: 1.0ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 6880)
+Completed 200 OK in 388ms (Views: 89.9ms | ActiveRecord: 1.6ms | Allocations: 45291)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/networks" for 192.168.3.2 at 2024-06-17 14:00:58 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#networks as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:66:in `fetch_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/networks.html.erb within layouts/application
+  Rendered compute_clusters/networks.html.erb within layouts/application (Duration: 1.4ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 7001)
+Completed 200 OK in 528ms (Views: 89.2ms | ActiveRecord: 1.4ms | Allocations: 49690)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/datastores" for 192.168.3.2 at 2024-06-17 14:01:51 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#datastores as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:31:in `fetch_datastores'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/datastores.html.erb within layouts/application
+  Rendered compute_clusters/datastores.html.erb within layouts/application (Duration: 1.0ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 7036)
+Completed 200 OK in 555ms (Views: 92.0ms | ActiveRecord: 1.1ms | Allocations: 45483)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 14:21:36 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.2ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 44.5ms | Allocations: 1430)
+  Rendered layout layouts/application.html.erb (Duration: 98.4ms | Allocations: 8138)
+Completed 200 OK in 474ms (Views: 121.3ms | ActiveRecord: 15.7ms | Allocations: 27622)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 14:21:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 256)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 7167)
+Completed 200 OK in 586ms (Views: 76.8ms | ActiveRecord: 1.5ms | Allocations: 56480)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 14:21:43 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.3ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | Allocations: 7558)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 1.3ms | Allocations: 7818)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateSubnets (20240617150133)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "subnets" ("id" bigserial primary key, "name" character varying, "address" character varying, "cidr" character varying, "mask" character varying, "gateway" character varying, "dns1" character varying, "dns2" character varying, "vm_network" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240617150133') RETURNING "version"[0m
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

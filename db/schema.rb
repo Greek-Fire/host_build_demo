@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_07_134350) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_17_150133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "subnets", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "cidr"
+    t.string "mask"
+    t.string "gateway"
+    t.string "dns1"
+    t.string "dns2"
+    t.string "vm_network"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "vcenter_credentials", force: :cascade do |t|
     t.string "vsphere_server"

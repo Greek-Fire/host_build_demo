@@ -6,6 +6,7 @@ DB_PASSWORD="redhat"
 DB_NAME="mock_ui"
 HOSTNAME="vcenter.lou.land"
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
+VCENTER_IP='192.168.2.11'
 
 sudo apt update
 sudo apt install postgresql postgresql-contrib  nodejs npm libpq-dev git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
@@ -29,15 +30,16 @@ sudo ufw allow 5432/tcp
 
 # Allow Rails server port
 sudo ufw allow 3000/tcp
+sudo ufw allow 443/tcp
 
 # Verify the firewall rules
 sudo ufw status
 
 echo "Firewall configured to allow traffic on PostgreSQL port 5432 and Rails server port 3000."
 
-echo "$IP_ADDRESS $HOSTNAME" | sudo tee -a /etc/hosts
+echo "$VCENTER_IP $HOSTNAME" | sudo tee -a /etc/hosts
 
-echo "Added $HOSTNAME with IP $IP_ADDRESS to /etc/hosts."
+echo "Added $HOSTNAME with IP $VCENTER_IP to /etc/hosts."
 
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
