@@ -1,7 +1,7 @@
 # app/controllers/vcenters_controller.rb
 
 class VcentersController < ApplicationController
-  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters] # Removed :update
+  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters] # Ensure only relevant actions are listed here
 
   def index
     @vcenters = Vcenter.all
