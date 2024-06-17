@@ -1,54 +1,36 @@
+<!-- app/views/datacenters/show.html.erb -->
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
       <h1><%= @vcenter.name %></h1>
       <p><%= @vcenter.url %></p>
 
-      <h2>Credentials</h2>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Username</th>
-            <th>SSL Verification</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @vcenter_credentials.each do |credential| %>
+      <h2>Compute Clusters</h2>
+      <% if @compute_clusters.present? %>
+        <table class="table table-bordered">
+          <thead>
             <tr>
-              <td><%= credential.vcenter.name %></td>
-              <td><%= credential.username %></td>
-              <td><%= credential.ssl_verification ? 'Enabled' : 'Disabled' %></td>
-              <td>
-                <div class="btn-group">
-                  <%= link_to 'Edit', edit_vcenter_vcenter_credential_path(@vcenter, credential), class: 'btn btn-warning btn-sm' %>
-                  <%= form_with url: vcenter_vcenter_credential_path(@vcenter, credential), method: :delete, local: true, html: { onsubmit: "return confirm('Are you sure you want to delete this credential?');" } do %>
-                    <%= submit_tag 'Delete', class: 'btn btn-danger btn-sm' %>
-                  <% end %>
-                  <%= form_with url: verify_vcenter_vcenter_credential_path(@vcenter, credential), method: :post, local: true do %>
-                    <%= submit_tag 'Verify', class: 'btn btn-primary btn-sm' %>
-                  <% end %>
-                </div>
-              </td>
+              <th>Name</th>
+              <th>Number of Hosts</th>
+              <th>Total Storage</th>
+              <th>Total VM Networks</th>
+              <th>Availability</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <%= link_to 'Add Credential', new_vcenter_vcenter_credential_path(@vcenter), class: 'btn btn-primary mt-3' %>
-
-      <h2>Datacenters</h2>
-      <%= button_to 'Update Datacenters', update_datacenters_vcenter_path(@vcenter), method: :post, class: 'btn btn-secondary mb-3' %>
-      <% if @datacenters.present? %>
-        <ul class="list-group">
-          <% @datacenters.each do |datacenter| %>
-            <li class="list-group-item">
-              <%= link_to datacenter.name, vcenter_datacenter_path(@vcenter, datacenter) %>
-            </li>
-          <% end %>
-        </ul>
+          </thead>
+          <tbody>
+            <% @compute_clusters.each do |cluster| %>
+              <tr>
+                <td><%= cluster[:name] %></td>
+                <td><%= cluster[:num_hosts] %></td>
+                <td><%= link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]) %></td>
+                <td><%= link_to cluster[:total_vm_networks], networks_vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]) %></td>
+                <td><%= cluster[:availability] %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       <% else %>
-        <p>No datacenters available.</p>
+        <p>No compute clusters available.</p>
       <% end %>
     </div>
   </div>
