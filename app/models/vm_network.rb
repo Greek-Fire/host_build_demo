@@ -1,0 +1,2 @@
+class VmNetwork < ApplicationRecord
+end
