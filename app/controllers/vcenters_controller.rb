@@ -1,11 +1,36 @@
 # app/controllers/vcenters_controller.rb
 
 class VcentersController < ApplicationController
-  before_action :set_vcenter, only: [:show, :edit, :update, :destroy, :update_datacenters]
+  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters] # Removed :update
+
+  def index
+    @vcenters = Vcenter.all
+  end
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
     @datacenters = fetch_datacenters(@vcenter)
+  end
+
+  def new
+    @vcenter = Vcenter.new
+  end
+
+  def create
+    @vcenter = Vcenter.new(vcenter_params)
+    if @vcenter.save
+      redirect_to @vcenter, notice: 'vCenter was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def destroy
+    @vcenter.destroy
+    redirect_to vcenters_url, notice: 'vCenter was successfully destroyed.'
   end
 
   def update_datacenters
@@ -22,6 +47,10 @@ class VcentersController < ApplicationController
 
   def set_vcenter
     @vcenter = Vcenter.find(params[:id])
+  end
+
+  def vcenter_params
+    params.require(:vcenter).permit(:name, :url)
   end
 
   def fetch_datacenters(vcenter)
