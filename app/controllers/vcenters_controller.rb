@@ -7,11 +7,7 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters.includes(compute_clusters: :datastores).map do |datacenter|
-      datacenter.as_json.merge(compute_clusters: datacenter.compute_clusters.map do |cluster|
-        cluster.as_json.merge(total_storage: calculate_total_storage(cluster), vm_networks: cluster.vm_networks)
-      end)
-    end
+    @datacenters = @vcenter.datacenters.includes(compute_clusters: [:datastores, :vm_networks])
   end
 
   def new
@@ -83,6 +79,6 @@ class VcentersController < ApplicationController
   end
 
   def calculate_total_storage(cluster)
-    cluster.datastores.sum(:total_storage)
+    cluster.datastores.sum(:capacity) # Ensure you have a capacity column in datastores
   end
 end
