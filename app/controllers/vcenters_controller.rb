@@ -1,4 +1,3 @@
-# app/controllers/vcenters_controller.rb
 class VcentersController < ApplicationController
   before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters]
 
@@ -8,7 +7,7 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters.includes(:compute_clusters)
+    @datacenters = @vcenter.datacenters
   end
 
   def new
@@ -34,7 +33,7 @@ class VcentersController < ApplicationController
 
   def update_datacenters
     fetch_and_store_datacenters(@vcenter)
-    redirect_to vcenter_path(@vcenter), notice: 'Datacenters and related data updated successfully.'
+    redirect_to vcenter_path(@vcenter)
   end
 
   private
@@ -67,23 +66,11 @@ class VcentersController < ApplicationController
       dc = vcenter.datacenters.find_or_create_by(name: datacenter.name)
       datacenter.clusters.each do |cluster|
         cc = dc.compute_clusters.find_or_create_by(name: cluster.name)
-        total_storage = 0
-        cluster.hosts.each do |host|
-          host.datastores.each do |datastore|
-            ds = cc.datastores.find_or_create_by(name: datastore.name)
-            ds.update(
-              freespace: datastore.freespace,
-              capacity: datastore.capacity,
-              uncommitted: datastore.uncommitted,
-              type: datastore.type,
-              accessible: datastore.accessible
-            )
-            total_storage += datastore.capacity
-          end
-        end
-        cc.update(total_storage: total_storage)
         cluster.networks.each do |network|
           cc.vm_networks.find_or_create_by(name: network.name)
+        end
+        cluster.datastores.each do |datastore|
+          cc.datastores.find_or_create_by(name: datastore.name)
         end
       end
     end

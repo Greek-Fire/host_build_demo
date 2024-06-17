@@ -1,12 +1,32 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
-      <h1>Compute Cluster: <%= @cluster[:name] %></h1>
-      <p><strong>Number of Hosts:</strong> <%= @cluster[:num_hosts] %></p>
-      <p><strong>Total Storage:</strong> <%= number_to_human_size(@cluster[:total_storage]) %></p>
-      <p><strong>Total VM Networks:</strong> <%= @cluster[:total_vm_networks] %></p>
-      <p><strong>Availability:</strong> <%= @cluster[:availability] %></p>
+      <h1>Compute Cluster: <%= @compute_cluster.name %></h1>
+      <p>Total Storage: <%= number_to_human_size(@compute_cluster.total_storage) %></p>
+
+      <h2>VM Networks</h2>
+      <% if @compute_cluster.vm_networks.present? %>
+        <ul class="list-group">
+          <% @compute_cluster.vm_networks.each do |network| %>
+            <li class="list-group-item"><%= network.name %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No VM networks available.</p>
+      <% end %>
+
+      <h2>Datastores</h2>
+      <% if @compute_cluster.datastores.present? %>
+        <ul class="list-group">
+          <% @compute_cluster.datastores.each do |datastore| %>
+            <li class="list-group-item">
+              <%= link_to datastore.name, datastores_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, @compute_cluster, datastore) %>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No datastores available.</p>
+      <% end %>
     </div>
   </div>
 </div>
-
