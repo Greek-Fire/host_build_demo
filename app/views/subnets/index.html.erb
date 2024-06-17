@@ -1,0 +1,32 @@
+<h1>Subnets</h1>
+
+<%= link_to 'New Subnet', new_subnet_path, class: 'btn btn-primary' %>
+
+<table class="table table-bordered mt-3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>CIDR</th>
+      <th>Mask</th>
+      <th>Gateway</th>
+      <th>DNS1</th>
+      <th>DNS2</th>
+      <th>VM Network</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @subnets.each do |subnet| %>
+      <tr>
+        <td><%= subnet.name %></td>
+        <td><%= subnet.address %></td>
+        <td><%= subnet.cidr %></td>
+        <td><%= subnet.mask %></td>
+        <td><%= subnet.gateway %></td>
+        <td><%= subnet.dns1 %></td>
+        <td><%= subnet.dns2 %></td>
+        <td><%= subnet.vm_network %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

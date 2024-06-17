@@ -1,0 +1,54 @@
+<%= form_with model: @subnet, local: true do |form| %>
+  <% if @subnet.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(@subnet.errors.count, "error") %> prohibited this subnet from being saved:</h4>
+      <ul>
+        <% @subnet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :cidr %>
+    <%= form.text_field :cidr, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :mask %>
+    <%= form.text_field :mask, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :gateway %>
+    <%= form.text_field :gateway, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dns1 %>
+    <%= form.text_field :dns1, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dns2 %>
+    <%= form.text_field :dns2, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :vm_network %>
+    <%= form.select :vm_network, @vm_networks.map { |network| [network.name, network.id] }, { include_blank: true }, class: 'form-control' %>
+  </div>
+
+  <%= form.submit 'Create Subnet', class: 'btn btn-primary' %>
+<% end %>
