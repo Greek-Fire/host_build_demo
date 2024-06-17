@@ -1,3 +1,4 @@
+# db/migrate/20240606161500_create_compute_clusters.rb
 class CreateComputeClusters < ActiveRecord::Migration[6.1]
   def change
     create_table :compute_clusters do |t|
