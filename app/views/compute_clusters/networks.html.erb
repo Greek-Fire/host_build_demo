@@ -1,32 +1,32 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
-      <h1>Networks in Compute Cluster: <%= @compute_cluster %></h1>
-      <p>Datacenter: <%= @datacenter %></p>
-      <p>vCenter: <%= @vcenter.name %></p>
+      <h1>Compute Cluster: <%= @compute_cluster.name %></h1>
+      <p>Total Storage: <%= number_to_human_size(@compute_cluster.total_storage) %></p>
 
-      <h2>Networks</h2>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Datacenter</th>
-            <th>Cluster</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @networks.each do |network| %>
-            <tr>
-              <td><%= network[:name] %></td>
-              <td><%= network[:type] %></td>
-              <td><%= network[:datacenter] %></td>
-              <td><%= network[:cluster] %></td>
-            </tr>
+      <h2>VM Networks</h2>
+      <% if @compute_cluster.vm_networks.present? %>
+        <ul class="list-group">
+          <% @compute_cluster.vm_networks.each do |network| %>
+            <li class="list-group-item"><%= network.name %></li>
           <% end %>
-        </tbody>
-      </table>
+        </ul>
+      <% else %>
+        <p>No VM networks available.</p>
+      <% end %>
+
+      <h2>Datastores</h2>
+      <% if @compute_cluster.datastores.present? %>
+        <ul class="list-group">
+          <% @compute_cluster.datastores.each do |datastore| %>
+            <li class="list-group-item">
+              <%= link_to datastore.name, datastores_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, @compute_cluster, datastore) %>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No datastores available.</p>
+      <% end %>
     </div>
   </div>
 </div>
-
