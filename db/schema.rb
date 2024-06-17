@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_17_161217) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_17_161732) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "compute_clusters", force: :cascade do |t|
+    t.string "name"
+    t.bigint "datacenter_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["datacenter_id"], name: "index_compute_clusters_on_datacenter_id"
+  end
+
+  create_table "datacenters", force: :cascade do |t|
+    t.string "name"
+    t.bigint "vcenter_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vcenter_id"], name: "index_datacenters_on_vcenter_id"
+  end
 
   create_table "networks", force: :cascade do |t|
     t.string "name"
@@ -59,5 +75,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_161217) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "compute_clusters", "datacenters"
+  add_foreign_key "datacenters", "vcenters"
   add_foreign_key "networks", "vcenters"
 end

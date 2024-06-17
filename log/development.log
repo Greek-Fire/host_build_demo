@@ -21747,3 +21747,144 @@ FOREIGN KEY ("vcenter_id")
   [1m[36mTRANSACTION (19.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:15:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.6ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 44.0ms | Allocations: 4302)
+  Rendered layout layouts/application.html.erb (Duration: 277.2ms | Allocations: 37178)
+Completed 200 OK in 349ms (Views: 273.9ms | ActiveRecord: 14.0ms | Allocations: 48527)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 16:15:41 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 74.5ms | Allocations: 10206)
+  Rendered layout layouts/application.html.erb (Duration: 104.9ms | Allocations: 16898)
+Completed 200 OK in 121ms (Views: 92.0ms | ActiveRecord: 15.2ms | Allocations: 19372)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 16:15:42 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.1ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:20
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3113)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 9972)
+Completed 200 OK in 1054ms (Views: 37.7ms | ActiveRecord: 9.1ms | Allocations: 169321)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 16:15:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:13:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:19:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1844)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 8769)
+Completed 200 OK in 554ms (Views: 43.7ms | ActiveRecord: 1.4ms | Allocations: 62314)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/datastores" for 192.168.3.2 at 2024-06-17 16:15:48 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#datastores as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:31:in `fetch_datastores'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/datastores.html.erb within layouts/application
+  Rendered compute_clusters/datastores.html.erb within layouts/application (Duration: 2.8ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 7507)
+Completed 200 OK in 381ms (Views: 36.6ms | ActiveRecord: 1.5ms | Allocations: 46705)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/networks" for 192.168.3.2 at 2024-06-17 16:15:53 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#networks as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:66:in `fetch_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/networks.html.erb within layouts/application
+  Rendered compute_clusters/networks.html.erb within layouts/application (Duration: 1.5ms | Allocations: 265)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 7007)
+Completed 200 OK in 425ms (Views: 32.8ms | ActiveRecord: 1.3ms | Allocations: 49720)
+
+
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:15:55 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.2ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 643)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 7356)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 1.2ms | Allocations: 7617)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 16:15:56 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  [1m[36mNetwork Pluck (1.1ms)[0m  [1m[34mSELECT "networks"."name", "networks"."id" FROM "networks"[0m
+  ↳ app/controllers/subnets_controller.rb:60:in `fetch_vm_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  Rendered subnets/new.html.erb within layouts/application (Duration: 57.1ms | Allocations: 5317)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 12213)
+Completed 200 OK in 174ms (Views: 85.4ms | ActiveRecord: 14.4ms | Allocations: 25326)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateDatacenters (20240617161731)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "datacenters" ("id" bigserial primary key, "name" character varying, "vcenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_f71c9b2102"
+FOREIGN KEY ("vcenter_id")
+  REFERENCES "vcenters" ("id")
+)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_datacenters_on_vcenter_id" ON "datacenters" ("vcenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240617161731') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComputeClusters (20240617161732)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "compute_clusters" ("id" bigserial primary key, "name" character varying, "datacenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_17019f6a17"
+FOREIGN KEY ("datacenter_id")
+  REFERENCES "datacenters" ("id")
+)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_compute_clusters_on_datacenter_id" ON "compute_clusters" ("datacenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240617161732') RETURNING "version"[0m
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
