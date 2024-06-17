@@ -1,4 +1,4 @@
-class CreateComputeClusters < ActiveRecord::Migration[7.1]
+class CreateComputeClusters < ActiveRecord::Migration[6.1]
   def change
     create_table :compute_clusters do |t|
       t.string :name

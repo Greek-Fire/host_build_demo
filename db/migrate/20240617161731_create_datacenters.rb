@@ -1,4 +1,4 @@
-class CreateDatacenters < ActiveRecord::Migration[7.1]
+class CreateDatacenters < ActiveRecord::Migration[6.1]
   def change
     create_table :datacenters do |t|
       t.string :name
