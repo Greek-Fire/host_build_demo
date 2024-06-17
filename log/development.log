@@ -20173,3 +20173,1577 @@ Migrating to CreateVmNetworks (20240617152049)
   [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:23:28 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (0.5ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4305)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 37626)
+Completed 200 OK in 123ms (Views: 96.7ms | ActiveRecord: 4.8ms | Allocations: 48899)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 15:23:30 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  [1m[36mVmNetwork Load (1.1ms)[0m  [1m[34mSELECT "vm_networks".* FROM "vm_networks"[0m
+  ↳ app/views/subnets/new.html.erb:50:in `map'
+  Rendered subnets/new.html.erb within layouts/application (Duration: 33.3ms | Allocations: 6025)
+  Rendered layout layouts/application.html.erb (Duration: 62.7ms | Allocations: 12714)
+Completed 200 OK in 188ms (Views: 59.8ms | ActiveRecord: 19.4ms | Allocations: 30170)
+
+
+Started POST "/subnets" for 192.168.3.2 at 2024-06-17 15:24:11 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "subnet"=>{"name"=>"192.168.2.0", "address"=>"192.168.2.0", "cidr"=>"24", "mask"=>"255.255.255.0", "gateway"=>"192.168.2.1", "dns1"=>"1.1.1.1", "dns2"=>"2.2.2.2", "vm_network"=>""}, "commit"=>"Create Subnet"}
+[31mUnpermitted parameter: :vm_network. Context: { controller: SubnetsController, action: create, request: #<ActionDispatch::Request:0x00007fa257a5ae00>, params: {"authenticity_token"=>"[FILTERED]", "subnet"=>{"name"=>"192.168.2.0", "address"=>"192.168.2.0", "cidr"=>"24", "mask"=>"255.255.255.0", "gateway"=>"192.168.2.1", "dns1"=>"1.1.1.1", "dns2"=>"2.2.2.2", "vm_network"=>""}, "commit"=>"Create Subnet", "controller"=>"subnets", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  [1m[36mVmNetwork Load (1.6ms)[0m  [1m[34mSELECT "vm_networks".* FROM "vm_networks"[0m
+  ↳ app/views/subnets/new.html.erb:50:in `map'
+  Rendered subnets/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3242)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 9858)
+Completed 200 OK in 54ms (Views: 45.0ms | ActiveRecord: 1.6ms | Allocations: 11695)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:24:57 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 5121)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 11786)
+Completed 200 OK in 74ms (Views: 57.2ms | ActiveRecord: 8.1ms | Allocations: 13532)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:24:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.1ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 3123)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 9982)
+Completed 200 OK in 1053ms (Views: 43.6ms | ActiveRecord: 9.6ms | Allocations: 168639)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:25:02 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 76.8ms | Allocations: 6511)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 6608)
+Completed 500 Internal Server Error in 526ms (ActiveRecord: 1.5ms | Allocations: 60258)
+
+
+  
+ActionView::Template::Error (undefined method `datastores_vcenter_datacenter_compute_cluster_path' for #<ActionView::Base:0x0000000000e650>
+
+              <td>'.freeze; @output_buffer.append=( link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, cluster[:name]) ); @output_buffer.safe_append='</td>
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^):
+    20:             <tr>
+    21:               <td><%= cluster[:name] %></td>
+    22:               <td><%= cluster[:num_hosts] %></td>
+    23:               <td><%= link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, cluster[:name]) %></td>
+    24:               <td><%= link_to cluster[:total_vm_networks], networks_vcenter_datacenter_compute_cluster_path(@vcenter, @datacenter, cluster[:name]) %></td>
+    25:               <td><%= cluster[:availability] %></td>
+    26:             </tr>
+  
+app/views/datacenters/show.html.erb:23
+app/views/datacenters/show.html.erb:19:in `each'
+app/views/datacenters/show.html.erb:19
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:28:53 +0000
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:28:53 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DatacentersController#show as HTML
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (1.1ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVcenter Load (2.0ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.2ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  [1m[36mVcenterCredential Load (2.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3369)
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3625)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4943)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4237)
+Completed 500 Internal Server Error in 1645ms (ActiveRecord: 39.8ms | Allocations: 279311)
+
+
+Completed 500 Internal Server Error in 1647ms (ActiveRecord: 35.1ms | Allocations: 279532)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;           @vcenter_credentials.each do |credential| 
+                                        ^^^^^):
+    15:           </tr>
+    16:         </thead>
+    17:         <tbody>
+    18:           <% @vcenter_credentials.each do |credential| %>
+    19:             <tr>
+    20:               <td><%= credential.vcenter.name %></td>
+    21:               <td><%= credential.username %></td>
+  
+app/views/datacenters/show.html.erb:18
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;           @vcenter_credentials.each do |credential| 
+                                        ^^^^^):
+    15:           </tr>
+    16:         </thead>
+    17:         <tbody>
+    18:           <% @vcenter_credentials.each do |credential| %>
+    19:             <tr>
+    20:               <td><%= credential.vcenter.name %></td>
+    21:               <td><%= credential.username %></td>
+  
+app/views/datacenters/show.html.erb:18
+Started GET "/" for 192.168.3.2 at 2024-06-17 15:29:11 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 360)
+  Rendered layout layouts/application.html.erb (Duration: 202.9ms | Allocations: 32432)
+Completed 200 OK in 207ms (Views: 205.7ms | ActiveRecord: 0.0ms | Allocations: 33058)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:29:13 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.3ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1755)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 8409)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 1.3ms | Allocations: 9056)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:29:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:57:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:67:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:18
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 72.0ms | Allocations: 7549)
+  Rendered layout layouts/application.html.erb (Duration: 73.2ms | Allocations: 7632)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 2.2ms | Allocations: 24604)
+
+
+  
+ActionView::Template::Error (undefined method `update_datacenters_vcenter_path' for #<ActionView::Base:0x0000000000f258>
+
+      '.freeze; @output_buffer.append=( button_to 'Update Datacenters', update_datacenters_vcenter_path(@vcenter), method: :post, class: 'btn btn-secondary mb-3' ); @output_buffer.safe_append='
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  update_rails_disk_service_path):
+    38:       <%= link_to 'Add Credential', new_vcenter_vcenter_credential_path(@vcenter), class: 'btn btn-primary mt-3' %>
+    39: 
+    40:       <h2>Datacenters</h2>
+    41:       <%= button_to 'Update Datacenters', update_datacenters_vcenter_path(@vcenter), method: :post, class: 'btn btn-secondary mb-3' %>
+    42:       <% if @datacenters.present? %>
+    43:         <ul class="list-group">
+    44:           <% @datacenters.each do |datacenter| %>
+  
+app/views/vcenters/show.html.erb:41
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:43:52 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 19ms (ActiveRecord: 0.0ms | Allocations: 3497)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :set_vcenter
+callback on VcentersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:43:56 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 622)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :set_vcenter
+callback on VcentersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.3.2 at 2024-06-17 15:43:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 203.4ms | Allocations: 33631)
+Completed 200 OK in 209ms (Views: 207.3ms | ActiveRecord: 0.0ms | Allocations: 34722)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:44:01 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 619)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :set_vcenter
+callback on VcentersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:44:24 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+Completed 404 Not Found in 9ms (ActiveRecord: 0.0ms | Allocations: 1780)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :set_vcenter
+callback on VcentersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:47:05 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+Completed 404 Not Found in 9ms (ActiveRecord: 0.0ms | Allocations: 1781)
+
+
+  
+AbstractController::ActionNotFound (The update action could not be found for the :set_vcenter
+callback on VcentersController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/" for 192.168.3.2 at 2024-06-17 15:48:57 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 137.8ms | Allocations: 33707)
+Completed 200 OK in 154ms (Views: 143.8ms | ActiveRecord: 0.0ms | Allocations: 38022)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:48:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 111.1ms | Allocations: 13137)
+  Rendered layout layouts/application.html.erb (Duration: 141.5ms | Allocations: 19828)
+Completed 200 OK in 188ms (Views: 116.0ms | ActiveRecord: 27.7ms | Allocations: 27625)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:49:01 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:20
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3125)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 9984)
+Completed 200 OK in 1022ms (Views: 38.2ms | ActiveRecord: 9.2ms | Allocations: 169520)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:49:04 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2771)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2867)
+Completed 500 Internal Server Error in 452ms (ActiveRecord: 1.4ms | Allocations: 56507)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;           @vcenter_credentials.each do |credential| 
+                                        ^^^^^):
+    15:           </tr>
+    16:         </thead>
+    17:         <tbody>
+    18:           <% @vcenter_credentials.each do |credential| %>
+    19:             <tr>
+    20:               <td><%= credential.vcenter.name %></td>
+    21:               <td><%= credential.username %></td>
+  
+app/views/datacenters/show.html.erb:18
+Started POST "/vcenters/1/update_datacenters" for 192.168.3.2 at 2024-06-17 15:49:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#update_datacenters as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 209ms (ActiveRecord: 1.5ms | Allocations: 17343)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:49:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.9ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:20
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 8313)
+Completed 200 OK in 250ms (Views: 40.2ms | ActiveRecord: 2.3ms | Allocations: 24907)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:49:12 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:12:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:18:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1836)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1919)
+Completed 500 Internal Server Error in 408ms (ActiveRecord: 1.4ms | Allocations: 51234)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;           @vcenter_credentials.each do |credential| 
+                                        ^^^^^):
+    15:           </tr>
+    16:         </thead>
+    17:         <tbody>
+    18:           <% @vcenter_credentials.each do |credential| %>
+    19:             <tr>
+    20:               <td><%= credential.vcenter.name %></td>
+    21:               <td><%= credential.username %></td>
+  
+app/views/datacenters/show.html.erb:18
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:49:19 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/home/foreman/host_build_demo/app/controllers/subnets_controller.rb:49: syntax error, unexpected end-of-input
+  def
+     ^
+):
+  
+app/controllers/subnets_controller.rb:49: syntax error, unexpected end-of-input
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:51:52 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.6ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 43.7ms | Allocations: 4303)
+  Rendered layout layouts/application.html.erb (Duration: 279.0ms | Allocations: 37514)
+Completed 200 OK in 351ms (Views: 275.1ms | ActiveRecord: 14.2ms | Allocations: 48904)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 15:51:54 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  [1m[36mVmNetwork Load (1.0ms)[0m  [1m[34mSELECT "vm_networks".* FROM "vm_networks"[0m
+  ↳ app/views/subnets/new.html.erb:50:in `map'
+  Rendered subnets/new.html.erb within layouts/application (Duration: 31.8ms | Allocations: 5930)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 12619)
+Completed 200 OK in 192ms (Views: 58.8ms | ActiveRecord: 19.2ms | Allocations: 30050)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 15:51:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (2.2ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 34.7ms | Allocations: 5137)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 11802)
+Completed 200 OK in 76ms (Views: 60.3ms | ActiveRecord: 8.3ms | Allocations: 13547)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 15:52:00 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.6ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:20
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3118)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 9977)
+Completed 200 OK in 1040ms (Views: 36.1ms | ActiveRecord: 9.0ms | Allocations: 168652)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:52:03 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:13:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.5ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:19:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 92.0ms | Allocations: 20262)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 20357)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.9ms | Allocations: 38624)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for   <Fog::Vsphere::Compute::Cluster
+    id="domain-c8",
+    name="TNCL",
+    datacenter="TNDC",
+    num_host=1,
+    num_cpu_cores=20,
+    overall_status="green",
+    full_path="TNCL"
+  >:Fog::Vsphere::Compute::Cluster
+
+                <td>'.freeze; @output_buffer.append=( cluster[:name] ); @output_buffer.safe_append='</td>
+                                                             ^^^^^^^):
+    20:           <tbody>
+    21:             <% @compute_clusters.each do |cluster| %>
+    22:               <tr>
+    23:                 <td><%= cluster[:name] %></td>
+    24:                 <td><%= cluster[:num_hosts] %></td>
+    25:                 <td><%= link_to number_to_human_size(cluster[:total_storage]), datastores_vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]) %></td>
+    26:                 <td><%= link_to cluster[:total_vm_networks], networks_vcenter_datacenter_compute_cluster_path(@vcenter, params[:id], cluster[:name]) %></td>
+  
+app/views/datacenters/show.html.erb:23
+app/views/datacenters/show.html.erb:21
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 15:56:11 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:13:in `set_vcenter'
+  [1m[36mVcenterCredential Load (1.0ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:19:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 2037)
+  Rendered layout layouts/application.html.erb (Duration: 195.6ms | Allocations: 35301)
+Completed 200 OK in 1620ms (Views: 205.8ms | ActiveRecord: 36.3ms | Allocations: 253674)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/networks" for 192.168.3.2 at 2024-06-17 15:56:16 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#networks as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:66:in `fetch_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/networks.html.erb within layouts/application
+  Rendered compute_clusters/networks.html.erb within layouts/application (Duration: 1.7ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 7278)
+Completed 200 OK in 441ms (Views: 36.9ms | ActiveRecord: 1.5ms | Allocations: 50680)
+
+
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:56:19 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.8ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 8145)
+Completed 200 OK in 48ms (Views: 39.0ms | ActiveRecord: 1.8ms | Allocations: 9766)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 15:56:20 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  [1m[36mVmNetwork Load (0.9ms)[0m  [1m[34mSELECT "vm_networks".* FROM "vm_networks"[0m
+  ↳ app/views/subnets/new.html.erb:50:in `map'
+  Rendered subnets/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 5255)
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 11944)
+Completed 200 OK in 143ms (Views: 58.3ms | ActiveRecord: 11.0ms | Allocations: 24167)
+
+
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 15:59:36 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#new as HTML
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 2079)
+
+
+  
+AbstractController::ActionNotFound (The show action could not be found for the :set_subnet
+callback on SubnetsController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:59:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 601)
+
+
+  
+AbstractController::ActionNotFound (The show action could not be found for the :set_subnet
+callback on SubnetsController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.3.2 at 2024-06-17 15:59:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 160.7ms | Allocations: 33748)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 0.0ms | Allocations: 34980)
+
+
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 15:59:48 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 600)
+
+
+  
+AbstractController::ActionNotFound (The show action could not be found for the :set_subnet
+callback on SubnetsController, but it is listed in the controller's
+:only option.
+
+Raising for missing callback actions is a new default in Rails 7.1, if you'd
+like to turn this off you can delete the option from the environment configurations
+or set `config.action_controller.raise_on_missing_callback_actions` to `false`.
+):
+  
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:62:in `match?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block (2 levels) in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `all?'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:119:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.3) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.3) lib/rack/etag.rb:29:in `call'
+rack (3.1.3) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.3) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:02:36 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.5ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 4302)
+  Rendered layout layouts/application.html.erb (Duration: 272.5ms | Allocations: 37533)
+Completed 200 OK in 342ms (Views: 268.1ms | ActiveRecord: 14.2ms | Allocations: 48883)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 16:02:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  [1m[36mVcenter Load (1.0ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/controllers/subnets_controller.rb:65:in `map'
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 22.6ms | Allocations: 26757)
+
+
+  
+NoMethodError (undefined method `networks' for #<Vcenter id: 1, name: "my lab", url: "vcenter.lou.land", created_at: "2024-06-15 01:14:19.422045000 +0000", updated_at: "2024-06-15 01:14:19.422045000 +0000">):
+  
+app/controllers/subnets_controller.rb:65:in `block in fetch_vm_networks'
+app/controllers/subnets_controller.rb:65:in `map'
+app/controllers/subnets_controller.rb:65:in `fetch_vm_networks'
+app/controllers/subnets_controller.rb:17:in `new'
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:07:25 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.3ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 4302)
+  Rendered layout layouts/application.html.erb (Duration: 236.8ms | Allocations: 37649)
+Completed 200 OK in 296ms (Views: 233.2ms | ActiveRecord: 12.0ms | Allocations: 48998)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 16:07:27 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  [1m[36mVcenter Load (1.1ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/controllers/subnets_controller.rb:60:in `map'
+  [1m[36mVcenterCredential Load (1.1ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/models/vcenter.rb:7:in `networks'
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  Rendered subnets/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 6574)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 6670)
+Completed 500 Internal Server Error in 1189ms (ActiveRecord: 30.1ms | Allocations: 193786)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "VM Network":String
+
+    '.freeze; @output_buffer.append=( form.select :vm_network, @vm_networks.map { |network| [network.name, network.id] }, { include_blank: true }, class: 'form-control' ); @output_buffer.safe_append='
+                                                                                                    ^^^^^):
+    47: 
+    48:   <div class="form-group">
+    49:     <%= form.label :vm_network %>
+    50:     <%= form.select :vm_network, @vm_networks.map { |network| [network.name, network.id] }, { include_blank: true }, class: 'form-control' %>
+    51:   </div>
+    52: 
+    53:   <%= form.submit 'Create Subnet', class: 'btn btn-primary' %>
+  
+app/views/subnets/new.html.erb:50
+app/views/subnets/new.html.erb:50:in `map'
+app/views/subnets/new.html.erb:50
+app/views/subnets/new.html.erb:1
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:07:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.9ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 7792)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 1.9ms | Allocations: 8104)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-17 16:07:41 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:11
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 8399)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 1.5ms | Allocations: 9042)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-17 16:07:42 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:49:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:59:in `fetch_datacenters'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1[0m  [["vcenter_id", 1]]
+  ↳ app/views/vcenters/show.html.erb:20
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3107)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 9848)
+Completed 200 OK in 306ms (Views: 45.9ms | ActiveRecord: 2.2ms | Allocations: 27568)
+
+
+Started GET "/vcenters/1/datacenters/TNDC" for 192.168.3.2 at 2024-06-17 16:07:44 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by DatacentersController#show as HTML
+  Parameters: {"vcenter_id"=>"1", "id"=>"TNDC"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:13:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.8ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/datacenters_controller.rb:19:in `fetch_compute_clusters'
+  Rendering layout layouts/application.html.erb
+  Rendering datacenters/show.html.erb within layouts/application
+  Rendered datacenters/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 8704)
+Completed 200 OK in 472ms (Views: 44.7ms | ActiveRecord: 1.6ms | Allocations: 61391)
+
+
+Started GET "/vcenters/1/datacenters/TNDC/compute_clusters/TNCL/networks" for 192.168.3.2 at 2024-06-17 16:07:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by ComputeClustersController#networks as HTML
+  Parameters: {"vcenter_id"=>"1", "datacenter_id"=>"TNDC", "id"=>"TNCL"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:17:in `set_vcenter'
+  [1m[36mVcenterCredential Load (0.7ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/compute_clusters_controller.rb:66:in `fetch_networks'
+  Rendering layout layouts/application.html.erb
+  Rendering compute_clusters/networks.html.erb within layouts/application
+  Rendered compute_clusters/networks.html.erb within layouts/application (Duration: 1.6ms | Allocations: 293)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 7255)
+Completed 200 OK in 418ms (Views: 37.5ms | ActiveRecord: 1.4ms | Allocations: 50638)
+
+
+Started GET "/subnets" for 192.168.3.2 at 2024-06-17 16:07:49 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/index.html.erb within layouts/application
+  [1m[36mSubnet Load (1.3ms)[0m  [1m[34mSELECT "subnets".* FROM "subnets"[0m
+  ↳ app/views/subnets/index.html.erb:17
+  Rendered subnets/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 642)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 7367)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 1.3ms | Allocations: 7627)
+
+
+Started GET "/subnets/new" for 192.168.3.2 at 2024-06-17 16:07:50 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 10.0.2.2, 127.0.0.0/127.255.255.255, ::1
+Processing by SubnetsController#new as HTML
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/controllers/subnets_controller.rb:60:in `map'
+  [1m[36mVcenterCredential Load (0.3ms)[0m  [1m[34mSELECT "vcenter_credentials".* FROM "vcenter_credentials" WHERE "vcenter_credentials"."vcenter_id" = $1 ORDER BY "vcenter_credentials"."id" ASC LIMIT $2[0m  [["vcenter_id", 1], ["LIMIT", 1]]
+  ↳ app/models/vcenter.rb:7:in `networks'
+  Rendering layout layouts/application.html.erb
+  Rendering subnets/new.html.erb within layouts/application
+  Rendered subnets/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4583)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4666)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.9ms | Allocations: 28143)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "VM Network":String
+
+    '.freeze; @output_buffer.append=( form.select :vm_network, @vm_networks.map { |network| [network.name, network.id] }, { include_blank: true }, class: 'form-control' ); @output_buffer.safe_append='
+                                                                                                    ^^^^^):
+    47: 
+    48:   <div class="form-group">
+    49:     <%= form.label :vm_network %>
+    50:     <%= form.select :vm_network, @vm_networks.map { |network| [network.name, network.id] }, { include_blank: true }, class: 'form-control' %>
+    51:   </div>
+    52: 
+    53:   <%= form.submit 'Create Subnet', class: 'btn btn-primary' %>
+  
+app/views/subnets/new.html.erb:50
+app/views/subnets/new.html.erb:50:in `map'
+app/views/subnets/new.html.erb:50
+app/views/subnets/new.html.erb:1
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+DEPRECATION WARNING: The config.web_console.whitelisted_ips is deprecated and will be ignored in future release of web_console. Please use config.web_console.allowed_ips instead. (called from <main> at /home/foreman/host_build_demo/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreateNetworks (20240617161217)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "networks" ("id" bigserial primary key, "name" character varying, "vcenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3261795041"
+FOREIGN KEY ("vcenter_id")
+  REFERENCES "vcenters" ("id")
+)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE INDEX "index_networks_on_vcenter_id" ON "networks" ("vcenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240617161217') RETURNING "version"[0m
+  [1m[36mTRANSACTION (19.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
