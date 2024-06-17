@@ -1,62 +1,53 @@
-class SubnetsController < ApplicationController
-  before_action :set_subnet, only: [:edit, :update, :destroy]
 
-  # GET /subnets
+# app/controllers/subnets_controller.rb
+class SubnetsController < ApplicationController
+  before_action :set_subnet, only: [:show, :edit, :update, :destroy]
+
   def index
     @subnets = Subnet.all
   end
 
-  # GET /subnets/new
+  def show
+  end
+
   def new
     @subnet = Subnet.new
-    @vm_networks = fetch_vm_networks
+    @vm_networks = VmNetwork.all.map { |network| [network.name, network.id] }
   end
 
-  # GET /subnets/1/edit
-  def edit
-    @vm_networks = fetch_vm_networks
-  end
-
-  # POST /subnets
   def create
     @subnet = Subnet.new(subnet_params)
     if @subnet.save
-      redirect_to subnets_path, notice: 'Subnet was successfully created.'
+      redirect_to @subnet, notice: 'Subnet was successfully created.'
     else
-      @vm_networks = fetch_vm_networks
       render :new
     end
   end
 
-  # PATCH/PUT /subnets/1
+  def edit
+    @vm_networks = VmNetwork.all.map { |network| [network.name, network.id] }
+  end
+
   def update
     if @subnet.update(subnet_params)
-      redirect_to subnets_path, notice: 'Subnet was successfully updated.'
+      redirect_to @subnet, notice: 'Subnet was successfully updated.'
     else
-      @vm_networks = fetch_vm_networks
       render :edit
     end
   end
 
-  # DELETE /subnets/1
   def destroy
     @subnet.destroy
-    redirect_to subnets_path, notice: 'Subnet was successfully destroyed.'
+    redirect_to subnets_url, notice: 'Subnet was successfully destroyed.'
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_subnet
     @subnet = Subnet.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def subnet_params
-    params.require(:subnet).permit(:name, :address, :cidr, :mask, :gateway, :dns1, :dns2, :vm_network)
-  end
-
-  def fetch_vm_networks
-    Network.all.pluck(:name, :id)
+    params.require(:subnet).permit(:name, :address, :cidr, :mask, :gateway, :dns1, :dns2, :vm_network_id)
   end
 end

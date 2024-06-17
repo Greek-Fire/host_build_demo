@@ -1,7 +1,6 @@
 # app/controllers/vcenters_controller.rb
-
 class VcentersController < ApplicationController
-  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters] # Ensure only relevant actions are listed here
+  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters]
 
   def index
     @vcenters = Vcenter.all
@@ -9,7 +8,7 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = fetch_datacenters(@vcenter)
+    @datacenters = @vcenter.datacenters
   end
 
   def new
@@ -34,12 +33,7 @@ class VcentersController < ApplicationController
   end
 
   def update_datacenters
-    @datacenters = fetch_datacenters(@vcenter)
-    if @datacenters.present?
-      flash[:notice] = "Datacenters updated successfully."
-    else
-      flash[:alert] = "Failed to update datacenters."
-    end
+    fetch_and_store_datacenters(@vcenter)
     redirect_to vcenter_path(@vcenter)
   end
 
@@ -53,14 +47,11 @@ class VcentersController < ApplicationController
     params.require(:vcenter).permit(:name, :url)
   end
 
-  def fetch_datacenters(vcenter)
+  def fetch_and_store_datacenters(vcenter)
     require 'fog/vsphere'
 
     credential = vcenter.vcenter_credentials.first
-    if credential.nil?
-      Rails.logger.debug("No credentials found for vCenter #{vcenter.id}")
-      return []
-    end
+    return unless credential
 
     connection = Fog::Compute.new(
       provider: 'Vsphere',
@@ -72,9 +63,16 @@ class VcentersController < ApplicationController
       vsphere_insecure: !credential.ssl_verification
     )
 
-    connection.datacenters.all
+    connection.datacenters.all.each do |datacenter|
+      dc = vcenter.datacenters.find_or_create_by(name: datacenter.name)
+      datacenter.clusters.each do |cluster|
+        cc = dc.compute_clusters.find_or_create_by(name: cluster.name)
+        cluster.networks.each do |network|
+          cc.vm_networks.find_or_create_by(name: network.name)
+        end
+      end
+    end
   rescue => e
     Rails.logger.error("Failed to fetch datacenters: #{e.message}")
-    []
   end
 end
