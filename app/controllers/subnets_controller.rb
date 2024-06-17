@@ -1,3 +1,5 @@
+# app/controllers/subnets_controller.rb
+
 class SubnetsController < ApplicationController
   before_action :set_subnet, only: [:edit, :update, :destroy]
 
@@ -44,7 +46,4 @@ class SubnetsController < ApplicationController
     @subnet = Subnet.find(params[:id])
   end
 
-  def subnet_params
-    params.require(:subnet).permit(:name, :address, :cidr, :mask, :gateway, :dns1, :dns2, :vm_network_id)
-  end
-end
+  def
