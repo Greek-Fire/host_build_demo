@@ -13,9 +13,6 @@ class VcentersController < ApplicationController
     @vcenter = Vcenter.new
   end
 
-  def edit
-  end
-
   def create
     @vcenter = Vcenter.new(vcenter_params)
     if @vcenter.save
@@ -23,6 +20,9 @@ class VcentersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
   end
 
   def update
@@ -39,11 +39,12 @@ class VcentersController < ApplicationController
   end
 
   private
-    def set_vcenter
-      @vcenter = Vcenter.find(params[:id])
-    end
 
-    def vcenter_params
-      params.require(:vcenter).permit(:name, :fqdn, :location)
-    end
+  def set_vcenter
+    @vcenter = Vcenter.find(params[:id])
+  end
+
+  def vcenter_params
+    params.require(:vcenter).permit(:name, :fqdn, :location)
+  end
 end

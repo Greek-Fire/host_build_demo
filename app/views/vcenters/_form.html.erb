@@ -1,0 +1,12 @@
+<!-- app/views/vcenters/_form.html.erb -->
+<%= form_with(model: vcenter, local: true) do |form| %>
+  <% if vcenter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vcenter.errors.count, "error") %> prohibited this vcenter from being saved:</h2>
+
+      <ul>
+        <% vcenter.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div
