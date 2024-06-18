@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'vcenters#index'
   resources :vcenters
   resources :datacenters
   resources :compute_clusters
