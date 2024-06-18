@@ -15,19 +15,20 @@ body {
 
 /* Custom styles for sidebar */
 .sidebar {
-  background-color: red; /* Make sidebar red */
+  background-color: #fff; /* Light background color */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red shadow */
   height: 100vh; /* Full height */
 }
 
 .sidebar .nav-link {
-  color: black; /* Make sidebar links black */
+  color: black !important; /* Make sidebar links black */
 }
 
 .sidebar .nav-link.active {
   font-weight: bold; /* Highlight the active link */
-  color: black;
+  color: black !important;
 }
 
 .sidebar .nav-link:hover {
-  color: black; /* Make sure hover color is also black */
+  color: black !important; /* Make sure hover color is also black */
 }
