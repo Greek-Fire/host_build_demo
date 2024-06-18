@@ -40,10 +40,15 @@ class VcentersController < ApplicationController
     end
   end
 
+  # app/controllers/vcenters_controller.rb
   def destroy
+    @vcenter = Vcenter.find(params[:id])
     @vcenter.destroy
-    redirect_to vcenters_url, notice: 'Vcenter was successfully destroyed.'
+    redirect_to vcenters_path, notice: 'Vcenter was successfully destroyed.'
+  rescue ActiveRecord::RecordNotFound
+    redirect_to vcenters_path, alert: 'Vcenter not found.'
   end
+
 
   private
 
