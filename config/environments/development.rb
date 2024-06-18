@@ -1,8 +1,6 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.web_console.whitelisted_ips = '10.0.2.2'
-  config.hosts << "10.0.2.2"  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -11,11 +9,6 @@ Rails.application.configure do
   config.enable_reloading = true
 
   # Do not eager load code on boot.
-  # Enable debug mode for more detailed logging
-  config.log_level = :debug
-
-  # Print deprecation notices to the Rails logger.
-  config.active_support.deprecation = :log
   config.eager_load = false
 
   # Show full error reports.

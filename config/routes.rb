@@ -1,20 +1,11 @@
-# config/routes.rb
 Rails.application.routes.draw do
-  resources :vcenters do
-    resources :vcenter_credentials, only: [:new, :create, :edit, :update, :destroy] do
-      post 'verify', on: :member
-    end
-    member do
-      post 'update_datacenters'
-    end
-    resources :datacenters, only: [:show] do
-      resources :compute_clusters, only: [:show] do
-        get 'networks', on: :member
-      end
-    end
-  end
+  get 'vcenter/index'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :subnets
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get "up" => "rails/health#show", as: :rails_health_check
 
-  root to: 'home#index'
+  # Defines the root path route ("/")
+  # root "posts#index"
 end

@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mock UI</title>
+    <title>HallasHostBuilder</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
+
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-2 bg-light sidebar">
-          <nav class="nav flex-column vh-100 p-3">
-            <%= nav_link_to 'Home', root_path %>
-            <%= nav_link_to 'vCenter', vcenters_path %>
-            <%= nav_link_to 'Subnets', subnets_path %>
-          </nav>
-        </div>
-        <div class="col-md-10">
-          <% if flash[:notice] %>
-            <div class="alert alert-success">
-              <%= flash[:notice] %>
-            </div>
-          <% elsif flash[:alert] %>
-            <div class="alert alert-danger">
-              <%= flash[:alert] %>
-            </div>
-          <% end %>
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>
