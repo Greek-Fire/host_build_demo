@@ -7,7 +7,18 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters
+    @datacenters = @vcenter.datacenters.includes(:compute_clusters).map do |datacenter|
+      {
+        datacenter: datacenter,
+        compute_clusters: datacenter.compute_clusters.map do |cluster|
+          {
+            cluster: cluster,
+            total_storage: cluster.datastores.sum(:capacity),
+            vm_networks: cluster.vm_networks
+          }
+        end
+      }
+    end
   end
 
   def new
