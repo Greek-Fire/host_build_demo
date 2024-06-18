@@ -7,7 +7,7 @@ default: &default
   webpack_compile_output: true
 
   # Additional paths webpack should look up modules
-  resolved_paths: []
+  resolved_paths: ['node_modules']
   cache_manifest: false
 
 development:
