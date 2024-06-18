@@ -1,2 +1,18 @@
-<h1>Vcenters#show</h1>
-<p>Find me in app/views/vcenters/show.html.erb</p>
+<!-- app/views/vcenters/show.html.erb -->
+<p>
+  <strong>Name:</strong>
+  <%= @vcenter.name %>
+</p>
+
+<p>
+  <strong>FQDN:</strong>
+  <%= @vcenter.fqdn %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @vcenter.location %>
+</p>
+
+<%= link_to 'Edit', edit_vcenter_path(@vcenter) %> |
+<%= link_to 'Back', vcenters_path %>
