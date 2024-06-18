@@ -1,5 +1,5 @@
 class VcentersController < ApplicationController
-  before_action :set_vcenter, only: [:show, :edit, :destroy, :update, :update_datacenters]
+  before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters]
 
   def index
     @vcenters = Vcenter.all
@@ -7,7 +7,7 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters.includes(:compute_clusters).map do |datacenter|
+    @datacenters = @vcenter.datacenters.map do |datacenter|
       {
         datacenter: datacenter,
         compute_clusters: datacenter.compute_clusters.map do |cluster|
@@ -33,15 +33,8 @@ class VcentersController < ApplicationController
       render :new
     end
   end
-  def edit
-  end
 
-  def update
-    if @vcenter.update(vcenter_params)
-      redirect_to @vcenter, notice: 'Vcenter was successfully updated.'
-    else
-      render :edit
-    end
+  def edit
   end
 
   def destroy
@@ -57,11 +50,7 @@ class VcentersController < ApplicationController
   private
 
   def set_vcenter
-    @vcenter = Vcenter.find_by(id: params[:id])
-    unless @vcenter
-      logger.error "Vcenter with id #{params[:id]} not found"
-      redirect_to vcenters_path, alert: 'Vcenter not found'
-    end
+    @vcenter = Vcenter.find(params[:id])
   end
 
   def vcenter_params
@@ -90,6 +79,9 @@ class VcentersController < ApplicationController
         cc = dc.compute_clusters.find_or_create_by(name: cluster.name)
         cluster.networks.each do |network|
           cc.vm_networks.find_or_create_by(name: network.name)
+        end
+        cluster.datastores.each do |datastore|
+          cc.datastores.find_or_create_by(name: datastore.name, capacity: datastore.capacity)
         end
       end
     end
