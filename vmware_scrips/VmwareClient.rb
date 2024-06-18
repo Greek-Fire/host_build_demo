@@ -38,12 +38,22 @@ class VMwareClient
     connect unless @vim
   end
 
-  # Helper method to recursively collect all datacenter objects
+  # Helper method to recursively collect all datacenter objects and additional details
   def get_datacenters(folder)
     datacenters = []
     folder.childEntity.each do |entity|
       if entity.is_a?(RbVmomi::VIM::Datacenter)
-        datacenters << entity.name
+        clusters = entity.hostFolder.childEntity.grep(RbVmomi::VIM::ClusterComputeResource)
+        num_clusters = clusters.count
+        num_hosts = clusters.map(&:host).flatten.count
+        num_vms = clusters.map { |cluster| cluster.resourcePool.vm }.flatten.count
+
+        datacenters << {
+          name: entity.name,
+          clusters: num_clusters,
+          hosts: num_hosts,
+          vms: num_vms
+        }
       elsif entity.is_a?(RbVmomi::VIM::Folder)
         datacenters.concat(get_datacenters(entity))  # Recursive call to navigate through folders
       end
