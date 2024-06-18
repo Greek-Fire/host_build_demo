@@ -10,7 +10,7 @@ password = 'Gr33k*G0d7'
 
 
 # Instantiate VMwareClient with connection details
-client = VMware Client.new(host: vcenter_host, user: username, password: password)
+client = VMwareClient.new(host: vcenter_host, user: username, password: password)
 
 # Collect and print detailed information about datacenters
 begin
