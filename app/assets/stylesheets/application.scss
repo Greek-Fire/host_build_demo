@@ -13,12 +13,17 @@ body {
 .jumbotron {
   background-color: #f8f9fa;
   padding: 2rem 1rem;
+  margin: 0; /* Remove default margins */
 }
 
-/* Custom styles for sidebar */
+.container-fluid {
+  padding: 0; /* Remove padding */
+}
+
 .sidebar {
   background-color: rgba(139, 0, 0, 0.7); /* Darker semi-transparent red */
   height: 100vh; /* Full height */
+  padding-top: 20px; /* Align with the body's top padding */
 }
 
 .sidebar .nav-link {
