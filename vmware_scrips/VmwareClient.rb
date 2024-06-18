@@ -13,24 +13,30 @@ class VMwareClient
   end
 
   def connect
-    @vim ||= RbVmomi::VIM.connect(
-      host: @host,
-      user: @user,
-      password: @password,
-      insecure: true # Set to false if using SSL certificates
-    )
+    if @vim.nil?
+      @vim = RbVmomi::VIM.connect(
+        host: @host,
+        user: @user,
+        password: @password,
+        insecure: true # Set to false if using SSL certificates
+      )
+    end
   end
 
   def disconnect
     @vim.close if @vim
-    @vim = nil  # Reset @vim to nil after closing
+    @vim = nil
   end
 
   def collect_datacenters
-    connect unless @vim  # Ensure connection is established
+    ensure_connection
     dc_mob = @vim.serviceInstance.find_datacenter
     dc_mob.map { |dc| dc.name }
   end
 
-  # Add more methods for other VMware vSphere operations as needed
+  private
+
+  def ensure_connection
+    connect unless @vim
+  end
 end
