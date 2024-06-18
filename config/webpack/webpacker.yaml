@@ -1,0 +1,21 @@
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_root_path: public/packs
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  webpack_compile_output: true
+
+  # Additional paths webpack should look up modules
+  resolved_paths: []
+  cache_manifest: false
+
+development:
+  <<: *default
+  compile: true
+
+production:
+  <<: *default
+  compile: false
+  extract_css: true
+  cache_manifest: true
