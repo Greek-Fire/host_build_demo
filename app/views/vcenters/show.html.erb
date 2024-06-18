@@ -40,31 +40,34 @@
       <h2>Datacenters</h2>
       <%= button_to 'Update Datacenters', update_datacenters_vcenter_path(@vcenter), method: :post, class: 'btn btn-secondary mb-3' %>
       <% if @datacenters.present? %>
-        <ul class="list-group">
-          <% @datacenters.each do |datacenter| %>
-            <li class="list-group-item">
-              <%= link_to datacenter.name, vcenter_datacenter_path(@vcenter, datacenter) %>
-              <ul>
-                <% datacenter.compute_clusters.each do |cluster| %>
-                  <li>
-                    <strong>Cluster: </strong> <%= link_to cluster.name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster) %>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Datacenter</th>
+              <th>Cluster</th>
+              <th>Total Storage</th>
+              <th>VM Networks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @datacenters.each do |datacenter| %>
+              <% datacenter.compute_clusters.each do |cluster| %>
+                <tr>
+                  <td><%= link_to datacenter.name, vcenter_datacenter_path(@vcenter, datacenter) %></td>
+                  <td><%= link_to cluster.name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster.name) %></td>
+                  <td><%= number_to_human_size(cluster.total_storage) %></td>
+                  <td>
                     <ul>
-                      <li>Total Storage: <%= number_to_human_size(cluster.datastores.sum(:capacity)) %></li>
-                      <li>
-                        VM Networks:
-                        <ul>
-                          <% cluster.vm_networks.each do |network| %>
-                            <li><%= network.name %></li>
-                          <% end %>
-                        </ul>
-                      </li>
+                      <% cluster.vm_networks.each do |network| %>
+                        <li><%= network.name %></li>
+                      <% end %>
                     </ul>
-                  </li>
-                <% end %>
-              </ul>
-            </li>
-          <% end %>
-        </ul>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
       <% else %>
         <p>No datacenters available.</p>
       <% end %>
