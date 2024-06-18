@@ -52,18 +52,14 @@
             </tr>
           </thead>
           <tbody>
-            <% @datacenters.each do |datacenter| %>
-              <% datacenter.compute_clusters.each do |cluster_hash| %>
+            <% @datacenters.each do |datacenter_hash| %>
+              <% datacenter_hash[:compute_clusters].each do |cluster_hash| %>
                 <tr>
-                  <td><%= datacenter.name %></td>
-                  <td><%= link_to cluster_hash[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster_hash[:cluster]) %></td>
+                  <td><%= datacenter_hash[:datacenter].name %></td>
+                  <td><%= link_to cluster_hash[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter_hash[:datacenter], cluster_hash[:cluster]) %></td>
                   <td><%= number_to_human_size(cluster_hash[:total_storage]) %></td>
-                  <td>
-                    <%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
-                  </td>
-                  <td>
-                    <%= link_to cluster_hash[:vms].count, vcenter_datacenter_compute_cluster_vms_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
-                  </td>
+                  <td><%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter_hash[:datacenter], cluster_hash[:cluster]) %></td>
+                  <td><%= link_to cluster_hash[:total_vms], vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter_hash[:datacenter], cluster_hash[:cluster]) %></td>
                 </tr>
               <% end %>
             <% end %>
