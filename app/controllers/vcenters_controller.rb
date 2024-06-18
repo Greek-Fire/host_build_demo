@@ -22,6 +22,8 @@ class VcentersController < ApplicationController
       render :new
     end
   end
+  def edit
+  end
 
   def update
     if @vcenter.update(vcenter_params)
