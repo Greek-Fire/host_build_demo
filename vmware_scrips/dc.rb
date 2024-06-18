@@ -1,7 +1,7 @@
 # your_script.rb
 
 # Load VMwareClient class from vmware_client.rb
-require_relative 'vmware_client'
+require_relative 'VmwareClient.rb'
 
 # Replace with your vSphere connection details
 vcenter_host = 'vcenter.lou.land'
