@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_17_161732) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_17_161733) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,12 +30,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_161732) do
     t.index ["vcenter_id"], name: "index_datacenters_on_vcenter_id"
   end
 
-  create_table "networks", force: :cascade do |t|
+  create_table "datastores", force: :cascade do |t|
     t.string "name"
-    t.bigint "vcenter_id", null: false
+    t.string "type"
+    t.integer "capacity"
+    t.bigint "compute_cluster_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["vcenter_id"], name: "index_networks_on_vcenter_id"
+    t.index ["compute_cluster_id"], name: "index_datastores_on_compute_cluster_id"
   end
 
   create_table "subnets", force: :cascade do |t|
@@ -46,19 +48,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_161732) do
     t.string "gateway"
     t.string "dns1"
     t.string "dns2"
-    t.string "vm_network"
+    t.bigint "vm_network_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["vm_network_id"], name: "index_subnets_on_vm_network_id"
   end
 
   create_table "vcenter_credentials", force: :cascade do |t|
     t.string "vsphere_server"
     t.string "username"
     t.string "password"
+    t.integer "vcenter_id"
     t.boolean "ssl_verification"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "vcenter_id"
     t.index ["vcenter_id"], name: "index_vcenter_credentials_on_vcenter_id"
   end
 
@@ -71,11 +74,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_161732) do
 
   create_table "vm_networks", force: :cascade do |t|
     t.string "name"
+    t.bigint "compute_cluster_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["compute_cluster_id"], name: "index_vm_networks_on_compute_cluster_id"
   end
 
   add_foreign_key "compute_clusters", "datacenters"
   add_foreign_key "datacenters", "vcenters"
-  add_foreign_key "networks", "vcenters"
+  add_foreign_key "datastores", "compute_clusters"
+  add_foreign_key "subnets", "vm_networks"
+  add_foreign_key "vm_networks", "compute_clusters"
 end
