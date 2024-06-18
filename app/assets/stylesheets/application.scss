@@ -1,7 +1,8 @@
-@import "../../../node_modules/bootstrap/scss/bootstrap"; // Use the tilde to resolve from node_modules
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 body {
   padding-top: 20px;
+  color: black; // Make text black
 }
 
 .navbar-brand {
@@ -11,4 +12,16 @@ body {
 .jumbotron {
   background-color: #f8f9fa;
   padding: 2rem 1rem;
+}
+
+.sidebar {
+  background-color: red; // Make sidebar red
+}
+
+.sidebar .nav-link {
+  color: white; // Make sidebar links white
+}
+
+.sidebar .nav-link.active {
+  font-weight: bold;
 }
