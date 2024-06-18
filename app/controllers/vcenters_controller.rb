@@ -7,7 +7,7 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters.includes(compute_clusters: [:datastores, :vm_networks])
+    @datacenters = @vcenter.datacenters
   end
 
   def new
@@ -69,16 +69,9 @@ class VcentersController < ApplicationController
         cluster.networks.each do |network|
           cc.vm_networks.find_or_create_by(name: network.name)
         end
-        cluster.datastores.each do |datastore|
-          cc.datastores.find_or_create_by(name: datastore.name)
-        end
       end
     end
   rescue => e
     Rails.logger.error("Failed to fetch datacenters: #{e.message}")
-  end
-
-  def calculate_total_storage(cluster)
-    cluster.datastores.sum(:capacity) # Ensure you have a capacity column in datastores
   end
 end
