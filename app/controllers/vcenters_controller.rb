@@ -1,3 +1,4 @@
+# app/controllers/vcenters_controller.rb
 class VcentersController < ApplicationController
   before_action :set_vcenter, only: [:show, :edit, :destroy, :update_datacenters]
 
@@ -7,7 +8,8 @@ class VcentersController < ApplicationController
 
   def show
     @vcenter_credentials = @vcenter.vcenter_credentials
-    @datacenters = @vcenter.datacenters.map do |datacenter|
+    @datacenters = @vcenter.datacenters.includes(compute_clusters: :vm_networks)
+    @datacenters = @datacenters.map do |datacenter|
       {
         datacenter: datacenter,
         compute_clusters: datacenter.compute_clusters.map do |cluster|
@@ -79,9 +81,6 @@ class VcentersController < ApplicationController
         cc = dc.compute_clusters.find_or_create_by(name: cluster.name)
         cluster.networks.each do |network|
           cc.vm_networks.find_or_create_by(name: network.name)
-        end
-        cluster.datastores.each do |datastore|
-          cc.datastores.find_or_create_by(name: datastore.name, capacity: datastore.capacity)
         end
       end
     end
