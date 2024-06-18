@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'vcenters#index'
-  resources :vcenters
+  resources :vcenters do
+    collection do
+      post :fetch_vcenters
+    end
+  end
   resources :datacenters
   resources :compute_clusters
   resources :datastore_clusters

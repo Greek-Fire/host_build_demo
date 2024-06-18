@@ -9,6 +9,13 @@ class VcentersController < ApplicationController
   def show
   end
 
+  def fetch_vcenters
+    VcenterFetcher.new.run # Assuming you have a method `run` in VcenterFetcher
+    redirect_to vcenters_path, notice: 'Vcenters are being fetched and updated.'
+  rescue StandardError => e
+    redirect_to vcenters_path, alert: "Failed to fetch vCenters: #{e.message}"
+  end  
+
   def new
     @vcenter = Vcenter.new
   end
