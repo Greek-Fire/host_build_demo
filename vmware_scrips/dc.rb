@@ -8,20 +8,6 @@ vcenter_host = 'vcenter.lou.land'
 username = 'administrator@lou.land'
 password = 'Gr33k*G0d7'
 
-
-# Instantiate VMwareClient with connection details
-client = VMwareClient.new(host: vcenter_host, user: username, password: password)
-
-# Collect and print detailed information about datacenters
-# dc.rb
-
-require_relative 'VMwareClient'
-
-# Replace with your vSphere connection details
-vcenter_host = 'your-vcenter-hostname'
-username = 'your-username'
-password = 'your-password'
-
 # Instantiate VMwareClient with connection details
 client = VMwareClient.new(host: vcenter_host, user: username, password: password)
 
