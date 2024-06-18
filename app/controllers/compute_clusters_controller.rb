@@ -1,17 +1,11 @@
+# app/controllers/compute_clusters_controller.rb
 class ComputeClustersController < ApplicationController
   before_action :set_vcenter
   before_action :set_datacenter
-  before_action :set_compute_cluster, only: [:show, :datastores, :networks]
+  before_action :set_compute_cluster, only: [:show]
 
   def show
-  end
-
-  def datastores
-    @datastores = @compute_cluster.datastores
-  end
-
-  def networks
-    @networks = @compute_cluster.vm_networks
+    @total_storage = @compute_cluster.datastores.sum(:capacity)
   end
 
   private
@@ -25,6 +19,6 @@ class ComputeClustersController < ApplicationController
   end
 
   def set_compute_cluster
-    @compute_cluster = @datacenter.compute_clusters.find_by(name: params[:id])
+    @compute_cluster = @datacenter.compute_clusters.find(params[:id])
   end
 end
