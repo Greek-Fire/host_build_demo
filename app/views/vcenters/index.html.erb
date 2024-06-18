@@ -22,7 +22,7 @@
           <td>
             <%= link_to 'Show', vcenter, class: 'btn btn-info btn-sm' %>
             <%= link_to 'Edit', edit_vcenter_path(vcenter), class: 'btn btn-warning btn-sm' %>
-            <%= link_to 'Delete', destroy_vcenter_path(vcenter), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+            <%= link_to 'Delete', vcenter_path(vcenter), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
             <%= link_to 'Fetch', fetch_vcenters_vcenters_path, method: :post, class: "btn btn-info btn-sm" %>
           </td>
         </tr>
