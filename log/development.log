@@ -877,3 +877,932 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 28ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4523)
 
 
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:14:08 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 383)
+Completed 200 OK in 30ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4523)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:14:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:14:16 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:13
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 46.2ms | Allocations: 4119)
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 6496)
+Completed 200 OK in 145ms (Views: 57.9ms | ActiveRecord: 15.2ms | Allocations: 17675)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:14:21 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 893)
+Completed 200 OK in 91ms (Views: 6.0ms | ActiveRecord: 18.9ms | Allocations: 11106)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:16:28 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 2686)
+Completed 200 OK in 174ms (Views: 28.1ms | ActiveRecord: 23.2ms | Allocations: 25553)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:16:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:13
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2032)
+Completed 200 OK in 24ms (Views: 11.3ms | ActiveRecord: 1.7ms | Allocations: 3619)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:16:36 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.4ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:13
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 632)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1278)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.3ms | Allocations: 1557)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:16:37 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 637)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 917)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:17:51 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 2683)
+Completed 200 OK in 191ms (Views: 31.2ms | ActiveRecord: 26.6ms | Allocations: 25542)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:17:55 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2108)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2868)
+Completed 200 OK in 26ms (Views: 13.7ms | ActiveRecord: 1.7ms | Allocations: 4455)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:17:56 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 634)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 921)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:19:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 2683)
+Completed 200 OK in 192ms (Views: 31.8ms | ActiveRecord: 27.1ms | Allocations: 25542)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:19:37 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (2.3ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:14
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2042)
+Completed 200 OK in 24ms (Views: 11.7ms | ActiveRecord: 2.2ms | Allocations: 3629)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:19:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 661)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 949)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:20:25 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 650)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 922)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:20:33 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (1.4ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:14
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 42.1ms | Allocations: 4209)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 6628)
+Completed 200 OK in 135ms (Views: 59.4ms | ActiveRecord: 14.3ms | Allocations: 18204)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:20:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 911)
+Completed 200 OK in 83ms (Views: 6.1ms | ActiveRecord: 15.1ms | Allocations: 10970)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:21:29 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2679)
+Completed 200 OK in 192ms (Views: 31.6ms | ActiveRecord: 27.1ms | Allocations: 25537)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:21:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Load (2.2ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:14
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2057)
+Completed 200 OK in 25ms (Views: 11.7ms | ActiveRecord: 2.1ms | Allocations: 3644)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:21:33 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 652)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 940)
+
+
+Started GET "/vcenters/new" for 192.168.3.2 at 2024-06-18 21:24:02 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/new.html.erb within layouts/application
+  Rendered vcenters/_form.html.erb (Duration: 26.8ms | Allocations: 3989)
+  Rendered vcenters/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 4485)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 5520)
+Completed 200 OK in 180ms (Views: 42.4ms | ActiveRecord: 22.8ms | Allocations: 28360)
+
+
+Started POST "/vcenters" for 192.168.3.2 at 2024-06-18 21:24:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter"=>{"name"=>"Lab", "fqdn"=>"vcenter.lou.land", "location"=>"TN"}, "commit"=>"Create Vcenter"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenters_controller.rb:18:in `create'
+  [1m[36mVcenter Create (5.4ms)[0m  [1m[32mINSERT INTO "vcenters" ("name", "fqdn", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lab"], ["fqdn", "vcenter.lou.land"], ["location", "TN"], ["created_at", "2024-06-18 21:24:15.648869"], ["updated_at", "2024-06-18 21:24:15.648869"]]
+  ↳ app/controllers/vcenters_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenters_controller.rb:18:in `create'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 23ms (ActiveRecord: 8.3ms | Allocations: 4301)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:24:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 314)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1097)
+Completed 200 OK in 31ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 5613)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:25:48 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 2942)
+Completed 200 OK in 215ms (Views: 32.4ms | ActiveRecord: 29.0ms | Allocations: 29735)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:25:51 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2075)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 2778)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 1.9ms | Allocations: 3178)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:25:57 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 708)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 1563)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:26:05 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 723)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 1562)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:26:08 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1346)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2026)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 1.7ms | Allocations: 2295)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:26:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 729)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 1550)
+
+
+Started GET "/vcenters/1/edit" for 192.168.3.2 at 2024-06-18 21:26:44 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/edit.html.erb within layouts/application
+  Rendered vcenters/_form.html.erb (Duration: 40.8ms | Allocations: 4635)
+  Rendered vcenters/edit.html.erb within layouts/application (Duration: 43.6ms | Allocations: 4976)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 5474)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.8ms | Allocations: 6379)
+
+
+Started PATCH "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:26:48 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vcenter"=>{"name"=>"Lab", "fqdn"=>"vcenter.lou.land", "location"=>"TNN"}, "commit"=>"Update Vcenter", "id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vcenters_controller.rb:29:in `update'
+  [1m[36mVcenter Update (5.0ms)[0m  [1m[33mUPDATE "vcenters" SET "location" = $1, "updated_at" = $2 WHERE "vcenters"."id" = $3[0m  [["location", "TNN"], ["updated_at", "2024-06-18 21:26:48.068136"], ["id", 1]]
+  ↳ app/controllers/vcenters_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vcenters_controller.rb:29:in `update'
+Redirected to http://192.168.2.229:3000/vcenters/1
+Completed 302 Found in 27ms (ActiveRecord: 8.7ms | Allocations: 4866)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:26:48 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 786)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 1648)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:26:54 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 723)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1545)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:27:00 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1380)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2042)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.8ms | Allocations: 2303)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:30:07 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 113.2ms | Allocations: 15551)
+  Rendered layout layouts/application.html.erb (Duration: 132.6ms | Allocations: 18015)
+Completed 200 OK in 199ms (Views: 115.0ms | ActiveRecord: 27.1ms | Allocations: 29591)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:30:12 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (1.0ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 316)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1095)
+Completed 200 OK in 21ms (Views: 7.6ms | ActiveRecord: 1.6ms | Allocations: 3664)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:30:20 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2036)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 2.0ms | Allocations: 2312)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:31:06 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 122.3ms | Allocations: 15549)
+  Rendered layout layouts/application.html.erb (Duration: 142.6ms | Allocations: 17805)
+Completed 200 OK in 213ms (Views: 124.4ms | ActiveRecord: 28.6ms | Allocations: 29382)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:31:09 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 314)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 968)
+Completed 200 OK in 21ms (Views: 6.7ms | ActiveRecord: 1.3ms | Allocations: 3537)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:31:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 1914)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 1.8ms | Allocations: 2190)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:31:14 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 607)
+Completed 200 OK in 11ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 1450)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:31:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1874)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 1.7ms | Allocations: 2143)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:31:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:44:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 595)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 1417)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:31:38 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1334)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 1883)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 1.8ms | Allocations: 2142)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:35:43 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 141.2ms | Allocations: 17162)
+  Rendered layout layouts/application.html.erb (Duration: 145.7ms | Allocations: 18020)
+Completed 200 OK in 216ms (Views: 126.4ms | ActiveRecord: 29.7ms | Allocations: 29582)
+
+
+Started POST "/vcenters/fetch_vcenters" for 192.168.3.2 at 2024-06-18 21:35:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#fetch_vcenters as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://192.168.2.229:3000/vcenters
+Completed 302 Found in 274ms (ActiveRecord: 0.0ms | Allocations: 97932)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:35:46 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1871)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2231)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 1.9ms | Allocations: 2561)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:36:34 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:36:34 +0000
+  ↳ app/views/vcenters/index.html.erb:4
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mVcenter Load (0.9ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (41.3ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 166.6ms | Allocations: 22375)
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 8461)
+  Rendered layout layouts/application.html.erb (Duration: 189.4ms | Allocations: 25027)
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | Allocations: 11184)
+Completed 200 OK in 263ms (Views: 171.0ms | ActiveRecord: 30.9ms | Allocations: 36867)
+
+
+Completed 200 OK in 85ms (Views: 25.6ms | ActiveRecord: 56.9ms | Allocations: 11813)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:37:39 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.5ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 103.6ms | Allocations: 15605)
+  Rendered layout layouts/application.html.erb (Duration: 120.6ms | Allocations: 17870)
+Completed 200 OK in 181ms (Views: 104.8ms | ActiveRecord: 24.1ms | Allocations: 29446)
+
+
+Started GET "/vcenters/fetch_vcenters" for 192.168.3.2 at 2024-06-18 21:37:42 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"fetch_vcenters"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.0ms | Allocations: 2617)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Vcenter with 'id'=fetch_vcenters):
+  
+app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:38:07 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 262)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 835)
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 1853)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:38:09 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 1991)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 2.0ms | Allocations: 2262)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:38:10 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1904)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 1.9ms | Allocations: 2173)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:38:12 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 607)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 1429)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:39:24 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 110.5ms | Allocations: 15611)
+  Rendered layout layouts/application.html.erb (Duration: 129.0ms | Allocations: 17895)
+Completed 200 OK in 194ms (Views: 111.9ms | ActiveRecord: 26.1ms | Allocations: 29471)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:39:26 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 314)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 966)
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 1.2ms | Allocations: 3535)
+
+
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:39:29 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1399)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1966)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 2.0ms | Allocations: 2242)
+
+
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:41:22 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.7ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 526)
+[Webpacker] Compiling...
+Started GET "/vcenters/1" for 192.168.3.2 at 2024-06-18 21:41:24 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVcenter Load (0.8ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters" WHERE "vcenters"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vcenters_controller.rb:51:in `set_vcenter'
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/show.html.erb within layouts/application
+  Rendered vcenters/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 88)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+webpack config /home/foreman/host_build_demo/hallas_host_builder/config/webpack/development.js not found, please run 'bundle exec rails webpacker:install' to install Webpacker with default configs or add the missing config file for your custom environment.
+
+  Rendered layout layouts/application.html.erb (Duration: 1762.3ms | Allocations: 14053)
+Completed 500 Internal Server Error in 1923ms (ActiveRecord: 24.6ms | Allocations: 40787)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/foreman/host_build_demo/hallas_host_builder/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', media: 'all' %>
+     8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+     9: 
+    10: </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8
+[Webpacker] Compilation failed:
+warning package.json: No license field
+webpack config /home/foreman/host_build_demo/hallas_host_builder/config/webpack/development.js not found, please run 'bundle exec rails webpacker:install' to install Webpacker with default configs or add the missing config file for your custom environment.
+
+  Rendered layout layouts/application.html.erb (Duration: 1383.1ms | Allocations: 445469)
+Completed 500 Internal Server Error in 1429ms (ActiveRecord: 14.0ms | Allocations: 449246)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/foreman/host_build_demo/hallas_host_builder/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', media: 'all' %>
+     8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+     9: 
+    10: </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8
+Started GET "/vcenters" for 192.168.3.2 at 2024-06-18 21:41:40 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2097)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+webpack config /home/foreman/host_build_demo/hallas_host_builder/config/webpack/development.js not found, please run 'bundle exec rails webpacker:install' to install Webpacker with default configs or add the missing config file for your custom environment.
+
+  Rendered layout layouts/application.html.erb (Duration: 1660.3ms | Allocations: 5504)
+Completed 500 Internal Server Error in 1663ms (ActiveRecord: 1.9ms | Allocations: 5847)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/foreman/host_build_demo/hallas_host_builder/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', media: 'all' %>
+     8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+     9: 
+    10: </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:41:45 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1376)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+webpack config /home/foreman/host_build_demo/hallas_host_builder/config/webpack/development.js not found, please run 'bundle exec rails webpacker:install' to install Webpacker with default configs or add the missing config file for your custom environment.
+
+  Rendered layout layouts/application.html.erb (Duration: 1540.0ms | Allocations: 4648)
+Completed 500 Internal Server Error in 1542ms (ActiveRecord: 1.8ms | Allocations: 4906)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/foreman/host_build_demo/hallas_host_builder/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', media: 'all' %>
+     8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+     9: 
+    10: </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:43:15 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcentersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenters/index.html.erb within layouts/application
+  [1m[36mVcenter Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "vcenters" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/vcenters/index.html.erb:4
+  [1m[36mVcenter Load (0.6ms)[0m  [1m[34mSELECT "vcenters".* FROM "vcenters"[0m
+  ↳ app/views/vcenters/index.html.erb:17
+  Rendered vcenters/index.html.erb within layouts/application (Duration: 111.3ms | Allocations: 15610)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+webpack config /home/foreman/host_build_demo/hallas_host_builder/config/webpack/development.js not found, please run 'bundle exec rails webpacker:install' to install Webpacker with default configs or add the missing config file for your custom environment.
+
+  Rendered layout layouts/application.html.erb (Duration: 1678.9ms | Allocations: 21113)
+Completed 500 Internal Server Error in 1743ms (ActiveRecord: 26.2ms | Allocations: 32641)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/foreman/host_build_demo/hallas_host_builder/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     5:   <%= csrf_meta_tags %>
+     6:   <%= csp_meta_tag %>
+     7:   <%= stylesheet_link_tag 'application', media: 'all' %>
+     8:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', type: 'module' %>
+     9: 
+    10: </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8
