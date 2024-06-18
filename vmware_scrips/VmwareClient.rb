@@ -13,14 +13,12 @@ class VMwareClient
   end
 
   def connect
-    if @vim.nil?
-      @vim = RbVmomi::VIM.connect(
-        host: @host,
-        user: @user,
-        password: @password,
-        insecure: true # Set to false if using SSL certificates
-      )
-    end
+    @vim ||= RbVmomi::VIM.connect(
+      host: @host,
+      user: @user,
+      password: @password,
+      insecure: true # Set to false if using SSL certificates
+    )
   end
 
   def disconnect
@@ -30,13 +28,26 @@ class VMwareClient
 
   def collect_datacenters
     ensure_connection
-    dc_mob = @vim.serviceInstance.find_datacenter
-    dc_mob.map { |dc| dc.name }
+    root_folder = @vim.serviceInstance.content.rootFolder
+    get_datacenters(root_folder)
   end
 
   private
 
   def ensure_connection
     connect unless @vim
+  end
+
+  # Helper method to recursively collect all datacenter objects
+  def get_datacenters(folder)
+    datacenters = []
+    folder.childEntity.each do |entity|
+      if entity.is_a?(RbVmomi::VIM::Datacenter)
+        datacenters << entity.name
+      elsif entity.is_a?(RbVmomi::VIM::Folder)
+        datacenters.concat(get_datacenters(entity))  # Recursive call to navigate through folders
+      end
+    end
+    datacenters
   end
 end
