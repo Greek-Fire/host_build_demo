@@ -45,7 +45,12 @@ class VcentersController < ApplicationController
 
   def set_vcenter
     @vcenter = Vcenter.find_by(id: params[:id])
+    unless @vcenter
+      logger.error "Vcenter with id #{params[:id]} not found"
+      redirect_to vcenters_path, alert: 'Vcenter not found'
+    end
   end
+
   def vcenter_params
     params.require(:vcenter).permit(:name, :url)
   end
