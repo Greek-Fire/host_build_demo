@@ -1,4 +1,4 @@
-class CreateSubnets < ActiveRecord::Migration[7.1]
+class CreateSubnets < ActiveRecord::Migration[6.0]
   def change
     create_table :subnets do |t|
       t.string :name
@@ -8,7 +8,7 @@ class CreateSubnets < ActiveRecord::Migration[7.1]
       t.string :gateway
       t.string :dns1
       t.string :dns2
-      t.string :vm_network
+      t.references :vm_network, foreign_key: true
 
       t.timestamps
     end
