@@ -1,2 +1,6 @@
-<h1>Vcenters#new</h1>
-<p>Find me in app/views/vcenters/new.html.erb</p>
+<!-- app/views/vcenters/new.html.erb and app/views/vcenters/edit.html.erb -->
+<h1><%= action_name == 'new' ? 'New Vcenter' : 'Edit Vcenter' %></h1>
+
+<%= render 'form', vcenter: @vcenter %>
+
+<%= link_to 'Back to List', vcenters_path, class: "btn btn-secondary" %>
