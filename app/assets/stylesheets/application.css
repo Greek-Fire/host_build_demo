@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+body {
+  padding-top: 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+}
