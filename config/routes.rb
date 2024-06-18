@@ -1,22 +1,16 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  root 'home#index'
-
   resources :vcenters do
-    resources :datacenters, only: [:show] do
-      resources :compute_clusters, only: [:show] do
-        member do
-          get 'datastores'
-          get 'networks'
-        end
+    member do
+      post :update_datacenters
+    end
+    resources :datacenters do
+      resources :compute_clusters do
+        resources :datastores, only: [:show]
+        resources :networks, only: [:show]
       end
     end
-    resources :vcenter_credentials, only: [:new, :create, :edit, :update, :destroy, :index, :show] do
-      member do
-        post 'verify'
-      end
-    end
-    post 'update_datacenters', on: :member
   end
-
   resources :subnets
+  root "home#index"
 end
