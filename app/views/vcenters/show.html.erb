@@ -59,7 +59,7 @@
                   <td><%= link_to cluster_hash[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster_hash[:cluster]) %></td>
                   <td><%= number_to_human_size(cluster_hash[:total_storage]) %></td>
                   <td>
-                    <%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
+                    <%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
                   </td>
                 </tr>
               <% end %>
