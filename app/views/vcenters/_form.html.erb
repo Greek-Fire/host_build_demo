@@ -2,11 +2,30 @@
 <%= form_with(model: vcenter, local: true) do |form| %>
   <% if vcenter.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(vcenter.errors.count, "error") %> prohibited this vcenter from being saved:</h2>
-
       <ul>
         <% vcenter.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
-    </div
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :vcenter_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fqdn %>
+    <%= form.text_field :fqdn, id: :vcenter_fqdn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :vcenter_location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
