@@ -29,7 +29,7 @@ class VMwareClient
   def collect_datacenters
     ensure_connection
     root_folder = @vim.serviceInstance.content.rootFolder
-    get_datacenters(root_ranker)
+    get_datacenters(root_folder)
   end
 
   private
