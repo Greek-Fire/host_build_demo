@@ -44,9 +44,8 @@ class VcentersController < ApplicationController
   private
 
   def set_vcenter
-    @vcenter = Vcenter.find(params[:id])
+    @vcenter = Vcenter.find_by(id: params[:id])
   end
-
   def vcenter_params
     params.require(:vcenter).permit(:name, :url)
   end
