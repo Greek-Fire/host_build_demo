@@ -23,7 +23,12 @@ class VcentersController < ApplicationController
     end
   end
 
-  def edit
+  def update
+    if @vcenter.update(vcenter_params)
+      redirect_to @vcenter, notice: 'Vcenter was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
