@@ -1,32 +1,22 @@
-# app/views/compute_clusters/show.html.erb
+<!-- app/views/compute_clusters/show.html.erb -->
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
       <h1>Compute Cluster: <%= @compute_cluster.name %></h1>
-      <p>Total Storage: <%= number_to_human_size(@total_storage) %></p>
+      <p>Total Storage: <%= number_to_human_size(@compute_cluster.total_storage) %></p>
 
       <h2>VM Networks</h2>
-      <% if @compute_cluster.vm_networks.present? %>
+      <% if @vm_networks.present? %>
         <ul class="list-group">
-          <% @compute_cluster.vm_networks.each do |network| %>
-            <li class="list-group-item"><%= network.name %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>No VM networks available.</p>
-      <% end %>
-
-      <h2>Datastores</h2>
-      <% if @compute_cluster.datastores.present? %>
-        <ul class="list-group">
-          <% @compute_cluster.datastores.each do |datastore| %>
+          <% @vm_networks.each do |network| %>
             <li class="list-group-item">
-              <%= link_to datastore.name, vcenter_datacenter_compute_cluster_datastore_path(@vcenter, @datacenter, @compute_cluster, datastore) %>
+              <%= network.name %>
+              <%= link_to "#{network.vms.count} VMs", vcenter_datacenter_compute_cluster_network_path(@vcenter, @datacenter, @compute_cluster, network) %>
             </li>
           <% end %>
         </ul>
       <% else %>
-        <p>No datastores available.</p>
+        <p>No VM networks available.</p>
       <% end %>
     </div>
   </div>

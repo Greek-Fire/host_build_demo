@@ -2,10 +2,10 @@
 class ComputeClustersController < ApplicationController
   before_action :set_vcenter
   before_action :set_datacenter
-  before_action :set_compute_cluster, only: [:show]
+  before_action :set_compute_cluster
 
   def show
-    @total_storage = @compute_cluster.datastores.sum(:capacity)
+    @vm_networks = @compute_cluster.vm_networks
   end
 
   private

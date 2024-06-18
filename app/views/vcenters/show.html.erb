@@ -1,4 +1,4 @@
-# app/views/vcenters/show.html.erb
+<!-- app/views/vcenters/show.html.erb -->
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
@@ -48,18 +48,21 @@
               <th>Cluster</th>
               <th>Total Storage</th>
               <th>VM Networks</th>
+              <th>Total VMs</th>
             </tr>
           </thead>
           <tbody>
-            <% @datacenters.each do |datacenter_hash| %>
-              <% datacenter = datacenter_hash[:datacenter] %>
-              <% datacenter_hash[:compute_clusters].each do |cluster_hash| %>
+            <% @datacenters.each do |datacenter| %>
+              <% datacenter.compute_clusters.each do |cluster_hash| %>
                 <tr>
                   <td><%= datacenter.name %></td>
                   <td><%= link_to cluster_hash[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster_hash[:cluster]) %></td>
                   <td><%= number_to_human_size(cluster_hash[:total_storage]) %></td>
                   <td>
-                    <%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
+                    <%= link_to cluster_hash[:vm_networks].count, vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
+                  </td>
+                  <td>
+                    <%= link_to cluster_hash[:vms].count, vcenter_datacenter_compute_cluster_vms_path(@vcenter, datacenter, cluster_hash[:cluster]) %>
                   </td>
                 </tr>
               <% end %>
