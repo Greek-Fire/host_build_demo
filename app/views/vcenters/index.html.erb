@@ -1,26 +1,33 @@
 <!-- app/views/vcenters/index.html.erb -->
 <h1>Vcenters</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>FQDN</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @vcenters.each do |vcenter| %>
-      <tr>
-        <td><%= vcenter.name %></td>
-        <td><%= link_to vcenter.fqdn, vcenter %></td>
-        <td><%= vcenter.location %></td>
-        <td><%= link_to 'Show', vcenter %></td>
-        <td><%= link_to 'Edit', edit_vcenter_path(vcenter) %></td>
-        <td><%= link_to 'Destroy', vcenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<%= link_to 'New Vcenter', new_vcenter_path %>
+<% if @vcenters.empty? %>
+  <p>No vCenters found. You can create one by clicking the button below.</p>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>FQDN</th>
+        <th>Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @vcenters.each do |vcenter| %>
+        <tr>
+          <td><%= vcenter.name %></td>
+          <td><%= vcenter.fqdn %></td>
+          <td><%= vcenter.location %></td>
+          <td>
+            <%= link_to 'Show', vcenter_path(vcenter) %>
+            <%= link_to 'Edit', edit_vcenter_path(vcenter) %>
+            <%= link_to 'Delete', vcenter_path(vcenter), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<%= link_to 'Create New Vcenter', new_vcenter_path, class: "btn btn-primary" %>
