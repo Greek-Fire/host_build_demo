@@ -50,15 +50,15 @@
             </tr>
           </thead>
           <tbody>
-            <% @datacenters.each do |datacenter| %>
-              <% datacenter.compute_clusters.each do |cluster| %>
+            <% @datacenters.each do |dc| %>
+              <% dc[:compute_clusters].each do |cc| %>
                 <tr>
-                  <td><%= link_to datacenter.name, vcenter_datacenter_path(@vcenter, datacenter) %></td>
-                  <td><%= link_to cluster.name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster.name) %></td>
-                  <td><%= number_to_human_size(cluster.total_storage) %></td>
+                  <td><%= link_to dc[:datacenter].name, vcenter_datacenter_path(@vcenter, dc[:datacenter]) %></td>
+                  <td><%= link_to cc[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, dc[:datacenter], cc[:cluster]) %></td>
+                  <td><%= number_to_human_size(cc[:total_storage]) %></td>
                   <td>
                     <ul>
-                      <% cluster.vm_networks.each do |network| %>
+                      <% cc[:vm_networks].each do |network| %>
                         <li><%= network.name %></li>
                       <% end %>
                     </ul>
