@@ -1,4 +1,4 @@
-class CreateVmNetworks < ActiveRecord::Migration[6.1]
+class CreateNetworks < ActiveRecord::Migration[6.1]
   def change
     create_table :vm_networks do |t|
       t.string :name
