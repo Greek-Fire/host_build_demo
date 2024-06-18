@@ -1,0 +1,2 @@
+module VmNetworksHelper
+end

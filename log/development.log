@@ -375,3 +375,505 @@ Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms | Allocations: 
 LoadError (cannot load such file -- sassc):
   
 app/views/layouts/application.html.erb:8
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:45:59 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 3484)
+Completed 200 OK in 62ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 7798)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:48:16 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2414)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6728)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:49:53 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2414)
+Completed 200 OK in 43ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 6728)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:49:54 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 577)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 868)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:50:31 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 2406)
+Completed 200 OK in 50ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 6729)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:50:33 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 592)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 882)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:51:09 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 522)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 769)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:51:18 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 378)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 619)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:53:01 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 2368)
+Completed 200 OK in 50ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 6682)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:53:07 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 562)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 852)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:53:22 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 2368)
+Completed 200 OK in 51ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 6682)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:53:52 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 416)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 707)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:53:53 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 482)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:55:24 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 1247)
+Completed 200 OK in 41ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 5547)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:56:30 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 2362)
+Completed 200 OK in 50ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 6676)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:56:30 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 532)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 823)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:57:42 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2371)
+Completed 200 OK in 43ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 6685)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 15:59:30 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 2377)
+Completed 200 OK in 50ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 6691)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:01:14 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 2374)
+Completed 200 OK in 50ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 6688)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:03:08 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2362)
+Completed 200 OK in 53ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 6676)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:04:53 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2353)
+Completed 200 OK in 45ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 6667)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:29:20 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 535)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 825)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:37:14 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 2677)
+Completed 200 OK in 54ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 6991)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 16:51:17 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by VcenterController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vcenter/index.html.erb within layouts/application
+  Rendered vcenter/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 706)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 996)
+
+
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:07:05 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 9 pending migrations:
+
+db/migrate/20240618210508_create_vcenters.rb
+db/migrate/20240618210510_create_datacenters.rb
+db/migrate/20240618210512_create_compute_clusters.rb
+db/migrate/20240618210514_create_datastore_clusters.rb
+db/migrate/20240618210516_create_datastores.rb
+db/migrate/20240618210518_create_vm_networks.rb
+db/migrate/20240618210520_create_virtual_machines.rb
+db/migrate/20240618210522_create_esx_hosts.rb
+db/migrate/20240618210524_create_credentials.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:07:07 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 9 pending migrations:
+
+db/migrate/20240618210508_create_vcenters.rb
+db/migrate/20240618210510_create_datacenters.rb
+db/migrate/20240618210512_create_compute_clusters.rb
+db/migrate/20240618210514_create_datastore_clusters.rb
+db/migrate/20240618210516_create_datastores.rb
+db/migrate/20240618210518_create_vm_networks.rb
+db/migrate/20240618210520_create_virtual_machines.rb
+db/migrate/20240618210522_create_esx_hosts.rb
+db/migrate/20240618210524_create_credentials.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.3) lib/rack/method_override.rb:28:in `call'
+rack (3.1.3) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.3) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (41.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mock_ui"[0m
+  [1m[35m (23.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "mock_ui_test"[0m
+  [1m[35m (110.2ms)[0m  [1m[35mCREATE DATABASE "mock_ui" ENCODING = 'unicode'[0m
+  [1m[35m (100.1ms)[0m  [1m[35mCREATE DATABASE "mock_ui_test" ENCODING = 'unicode'[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-06-18 21:07:28.972242', '2024-06-18 21:07:28.972254') RETURNING "key"[0m
+Migrating to CreateVcenters (20240618210508)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "vcenters" ("id" bigserial primary key, "name" character varying, "fqdn" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210508') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDatacenters (20240618210510)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "datacenters" ("id" bigserial primary key, "name" character varying, "vcenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_f71c9b2102"
+FOREIGN KEY ("vcenter_id")
+  REFERENCES "vcenters" ("id")
+)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_datacenters_on_vcenter_id" ON "datacenters" ("vcenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210510') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComputeClusters (20240618210512)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "compute_clusters" ("id" bigserial primary key, "name" character varying, "total_memory" integer, "total_cores" integer, "total_storage" integer, "datacenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_17019f6a17"
+FOREIGN KEY ("datacenter_id")
+  REFERENCES "datacenters" ("id")
+)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_compute_clusters_on_datacenter_id" ON "compute_clusters" ("datacenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210512') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDatastoreClusters (20240618210514)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "datastore_clusters" ("id" bigserial primary key, "name" character varying, "total_storage" integer, "datacenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_aadcb1e07f"
+FOREIGN KEY ("datacenter_id")
+  REFERENCES "datacenters" ("id")
+)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_datastore_clusters_on_datacenter_id" ON "datastore_clusters" ("datacenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210514') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDatastores (20240618210516)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "datastores" ("id" bigserial primary key, "name" character varying, "storage_capacity" integer, "datastore_cluster_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c7a08cf71d"
+FOREIGN KEY ("datastore_cluster_id")
+  REFERENCES "datastore_clusters" ("id")
+)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_datastores_on_datastore_cluster_id" ON "datastores" ("datastore_cluster_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210516') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVmNetworks (20240618210518)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "vm_networks" ("id" bigserial primary key, "name" character varying, "compute_cluster_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_63d3e38d25"
+FOREIGN KEY ("compute_cluster_id")
+  REFERENCES "compute_clusters" ("id")
+)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_vm_networks_on_compute_cluster_id" ON "vm_networks" ("compute_cluster_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210518') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVirtualMachines (20240618210520)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "virtual_machines" ("id" bigserial primary key, "name" character varying, "ip_address" character varying, "vm_network_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_82f06edc28"
+FOREIGN KEY ("vm_network_id")
+  REFERENCES "vm_networks" ("id")
+)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE INDEX "index_virtual_machines_on_vm_network_id" ON "virtual_machines" ("vm_network_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210520') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEsxHosts (20240618210522)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "esx_hosts" ("id" bigserial primary key, "name" character varying, "ip_address" character varying, "compute_cluster_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_caf81d0bc1"
+FOREIGN KEY ("compute_cluster_id")
+  REFERENCES "compute_clusters" ("id")
+)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE INDEX "index_esx_hosts_on_compute_cluster_id" ON "esx_hosts" ("compute_cluster_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210522') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCredentials (20240618210524)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "credentials" ("id" bigserial primary key, "username" character varying, "password" character varying, "ssl_verification" boolean, "source" character varying, "vcenter_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3da1753d40"
+FOREIGN KEY ("vcenter_id")
+  REFERENCES "vcenters" ("id")
+)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE INDEX "index_credentials_on_vcenter_id" ON "credentials" ("vcenter_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240618210524') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6540927482667886245)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 192.168.3.2 at 2024-06-18 21:07:35 +0000
+Cannot render console from 192.168.3.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/foreman/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/railties-7.1.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 383)
+Completed 200 OK in 28ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4523)
+
+
