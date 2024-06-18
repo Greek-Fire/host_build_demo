@@ -1,5 +1,5 @@
 class VcentersController < ApplicationController
-  before_action :set_vcenter, only: [:show, :edit, :destroy, :update]
+  before_action :set_vcenter, only: [:show, :edit, :destroy, :update, :update_datacenters]
 
   def index
     @vcenters = Vcenter.all
