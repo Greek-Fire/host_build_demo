@@ -1,3 +1,4 @@
+# app/views/vcenters/show.html.erb
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
@@ -50,18 +51,14 @@
             </tr>
           </thead>
           <tbody>
-            <% @datacenters.each do |dc| %>
-              <% dc[:compute_clusters].each do |cc| %>
+            <% @datacenters.each do |datacenter| %>
+              <% datacenter.compute_clusters.each do |cluster| %>
                 <tr>
-                  <td><%= link_to dc[:datacenter].name, vcenter_datacenter_path(@vcenter, dc[:datacenter]) %></td>
-                  <td><%= link_to cc[:cluster].name, vcenter_datacenter_compute_cluster_path(@vcenter, dc[:datacenter], cc[:cluster]) %></td>
-                  <td><%= number_to_human_size(cc[:total_storage]) %></td>
+                  <td><%= datacenter.name %></td>
+                  <td><%= link_to cluster.name, vcenter_datacenter_compute_cluster_path(@vcenter, datacenter, cluster) %></td>
+                  <td><%= number_to_human_size(cluster.total_storage) %></td>
                   <td>
-                    <ul>
-                      <% cc[:vm_networks].each do |network| %>
-                        <li><%= network.name %></li>
-                      <% end %>
-                    </ul>
+                    <%= link_to cluster.vm_networks.count, vcenter_datacenter_compute_cluster_networks_path(@vcenter, datacenter, cluster) %>
                   </td>
                 </tr>
               <% end %>

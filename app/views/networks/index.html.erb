@@ -1,0 +1,26 @@
+# app/views/networks/index.html.erb
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>VM Networks for <%= @compute_cluster.name %></h1>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Network Name</th>
+            <th>Datacenter</th>
+            <th>Compute Cluster</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @networks.each do |network| %>
+            <tr>
+              <td><%= network.name %></td>
+              <td><%= @datacenter.name %></td>
+              <td><%= @compute_cluster.name %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
