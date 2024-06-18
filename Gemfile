@@ -9,7 +9,6 @@ gem 'bootstrap', '~> 5.0'
 gem 'jquery-rails' # jQuery is needed for Bootstrap's JavaScript components
 gem 'sassc-rails'
 # Gemfile
-gem 'webpacker', '~> 5.0'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
