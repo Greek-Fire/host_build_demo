@@ -14,17 +14,18 @@
  *= require_self
  */
 
- @import "bootstrap";
+ @import "bootstrap/dist/css/bootstrap";
 
-body {
-  padding-top: 20px;
-}
-
-.navbar-brand {
-  font-weight: bold;
-}
-
-.jumbotron {
-  background-color: #f8f9fa;
-  padding: 2rem 1rem;
-}
+ body {
+   padding-top: 20px;
+ }
+ 
+ .navbar-brand {
+   font-weight: bold;
+ }
+ 
+ .jumbotron {
+   background-color: #f8f9fa;
+   padding: 2rem 1rem;
+ }
+ 
