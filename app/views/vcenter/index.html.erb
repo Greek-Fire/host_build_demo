@@ -1,13 +1,9 @@
-<!-- app/views/vcenter/index.html.erb -->
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Hallas</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -19,11 +15,14 @@
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="jumbotron mt-4">
-    <h1 class="display-4">Hallas Host Builder</h1>
-    <p class="lead">Simplifying your multi-vCenter environment.</p>
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="jumbotron mt-4">
+        <h1 class="display-4">Hallas Host Builder</h1>
+        <p class="lead">Simplifying your multi-vCenter environment.</p>
+      </div>
+    </main>
   </div>
 </div>
