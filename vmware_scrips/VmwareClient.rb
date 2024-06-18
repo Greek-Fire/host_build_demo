@@ -23,19 +23,14 @@ class VMwareClient
 
   def disconnect
     @vim.close if @vim
+    @vim = nil  # Reset @vim to nil after closing
   end
 
   def collect_datacenters
+    connect unless @vim  # Ensure connection is established
     dc_mob = @vim.serviceInstance.find_datacenter
     dc_mob.map { |dc| dc.name }
   end
 
   # Add more methods for other VMware vSphere operations as needed
-
-  private
-
-  def reconnect
-    disconnect
-    connect
-  end
 end
