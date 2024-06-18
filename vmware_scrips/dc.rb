@@ -10,3 +10,8 @@ password = 'Gr33k*G0d7'
 
 # Instantiate VMwareClient with connection details
 client = VMwareClient.new(host: vcenter_host, user: username, password: password)
+
+# Example: Collect and print datacenters
+
+datacenters = client.collect_datacenters
+puts "Datacenters: #{datacenters.join(', ')}"
