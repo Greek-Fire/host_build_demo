@@ -2,7 +2,6 @@
 
 body {
   padding-top: 20px;
-  color: black; // Make text black
 }
 
 .navbar-brand {
@@ -14,14 +13,21 @@ body {
   padding: 2rem 1rem;
 }
 
+/* Custom styles for sidebar */
 .sidebar {
-  background-color: red; // Make sidebar red
+  background-color: red; /* Make sidebar red */
+  height: 100vh; /* Full height */
 }
 
 .sidebar .nav-link {
-  color: white; // Make sidebar links white
+  color: black; /* Make sidebar links black */
 }
 
 .sidebar .nav-link.active {
-  font-weight: bold;
+  font-weight: bold; /* Highlight the active link */
+  color: black;
+}
+
+.sidebar .nav-link:hover {
+  color: black; /* Make sure hover color is also black */
 }
